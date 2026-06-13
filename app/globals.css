@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   Brand tokens — SIMS PROSPECTS
+   Orange = energy + momentum, used only for CTAs and emphasis.
+   Deep slate (Tailwind's built-in slate-900/950) carries structure.
+   ⚠️ CONFIRM exact hex values against brand guidelines.
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  --color-brand: #ea580c;        /* primary / CTA            */
+  --color-brand-dark: #c2410c;   /* CTA hover / pressed      */
+  --color-brand-light: #fb923c;  /* accents on dark surfaces */
+  --color-brand-tint: #fff7ed;   /* soft orange backgrounds  */
+
+  --font-sans: var(--font-geist-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
