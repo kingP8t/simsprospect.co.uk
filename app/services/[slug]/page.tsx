@@ -78,9 +78,48 @@ export default async function ServiceDetailPage({ params }: Props) {
     areaServed: "Global",
   };
 
+  /* FAQ structured data — makes the Q&A below eligible for rich
+     results in search and more citable by AI answer engines.
+     Mirrors exactly the questions rendered in the FAQ section. */
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
+  /* Breadcrumb trail — Home › Services › this service. Helps search
+     engines understand site hierarchy and can show breadcrumbs in results. */
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${site.url}/#services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.name,
+        item: `${site.url}/services/${service.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </script>
 
       {/* Hero */}
       <section className="border-b border-slate-200 bg-slate-50">

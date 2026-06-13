@@ -55,9 +55,23 @@ const faqs = [
   },
 ];
 
+/* FAQ structured data — makes these answers eligible for rich results
+   in search and more citable by AI answer engines. Mirrors the visible
+   Q&A below exactly (Google requires the markup to match the page). */
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export function Faq() {
   return (
     <section id="faq" className="scroll-mt-20 bg-slate-50 py-20 sm:py-24">
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Questions"

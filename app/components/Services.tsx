@@ -1,16 +1,10 @@
 import Link from "next/link";
 import { SectionHeading } from "@/app/components/SectionHeading";
+import { services } from "@/app/lib/services";
 
-type Service = {
-  title: string;
-  /** Slug of the matching landing page at /services/{slug}. */
-  slug: string;
-  description: string;
-  outcome: string;
-  icon: React.ReactNode;
-};
-
-/* Minimal inline icons keep the page dependency-free and fast. */
+/* Minimal inline icons keep the page dependency-free and fast.
+   Keyed by service slug so the cards stay in sync with the single
+   source of truth in app/lib/services.ts (copy lives there, not here). */
 const iconProps = {
   width: 22,
   height: 22,
@@ -22,59 +16,31 @@ const iconProps = {
   strokeLinejoin: "round" as const,
 };
 
-const services: Service[] = [
-  {
-    title: "Cold calling",
-    slug: "cold-calling",
-    description:
-      "Outbound calling campaigns into your target accounts, run by trained callers using messaging built around your offer.",
-    outcome: "Conversations with decision-makers, not gatekeepers.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <path d="M3 5a2 2 0 0 1 2-2h2.6a1 1 0 0 1 1 .76l1 4a1 1 0 0 1-.3 1l-1.8 1.8a14 14 0 0 0 6 6l1.8-1.8a1 1 0 0 1 1-.3l4 1a1 1 0 0 1 .76 1V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5Z" />
-      </svg>
-    ),
-  },
-  {
-    title: "LinkedIn inbound marketing",
-    slug: "linkedin-inbound-marketing",
-    description:
-      "Content and outreach that builds your authority and pulls qualified prospects toward a conversation with your team.",
-    outcome: "Warmer prospects who already know who you are.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <path d="M4 4h16v16H4z" />
-        <path d="M8 11v6M8 8v.01M12 17v-3a2 2 0 0 1 4 0v3" />
-      </svg>
-    ),
-  },
-  {
-    title: "B2B appointment setting",
-    slug: "b2b-appointment-setting",
-    description:
-      "We qualify interest and book vetted meetings straight onto your sales team's calendar — confirmed and ready to run.",
-    outcome: "A calendar of meetings that fit your ideal customer.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
-        <path d="M4 9h16M8 3v4M16 3v4M9.5 14l1.8 1.8 3.2-3.6" />
-      </svg>
-    ),
-  },
-  {
-    title: "B2B lead generation",
-    slug: "b2b-lead-generation",
-    description:
-      "Sourcing and qualifying leads that match your ideal customer profile, so your pipeline is built on fit, not volume.",
-    outcome: "A steady supply of leads worth your reps' time.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <circle cx="11" cy="11" r="7" />
-        <path d="m21 21-4.3-4.3" />
-      </svg>
-    ),
-  },
-];
+const icons: Record<string, React.ReactNode> = {
+  "cold-calling": (
+    <svg {...iconProps} aria-hidden="true">
+      <path d="M3 5a2 2 0 0 1 2-2h2.6a1 1 0 0 1 1 .76l1 4a1 1 0 0 1-.3 1l-1.8 1.8a14 14 0 0 0 6 6l1.8-1.8a1 1 0 0 1 1-.3l4 1a1 1 0 0 1 .76 1V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5Z" />
+    </svg>
+  ),
+  "linkedin-inbound-marketing": (
+    <svg {...iconProps} aria-hidden="true">
+      <path d="M4 4h16v16H4z" />
+      <path d="M8 11v6M8 8v.01M12 17v-3a2 2 0 0 1 4 0v3" />
+    </svg>
+  ),
+  "b2b-appointment-setting": (
+    <svg {...iconProps} aria-hidden="true">
+      <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+      <path d="M4 9h16M8 3v4M16 3v4M9.5 14l1.8 1.8 3.2-3.6" />
+    </svg>
+  ),
+  "b2b-lead-generation": (
+    <svg {...iconProps} aria-hidden="true">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m21 21-4.3-4.3" />
+    </svg>
+  ),
+};
 
 export function Services() {
   return (
@@ -89,21 +55,21 @@ export function Services() {
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <Link
-              key={service.title}
+              key={service.slug}
               href={`/services/${service.slug}`}
               className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-shadow hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
               <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-tint text-brand">
-                {service.icon}
+                {icons[service.slug]}
               </span>
               <h3 className="mt-5 text-lg font-semibold text-slate-900">
-                {service.title}
+                {service.name}
               </h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
-                {service.description}
+                {service.cardDescription}
               </p>
               <p className="mt-4 border-t border-slate-100 pt-4 text-sm font-medium text-slate-900">
-                {service.outcome}
+                {service.cardOutcome}
               </p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
                 Learn more
