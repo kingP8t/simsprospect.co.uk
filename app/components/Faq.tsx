@@ -1,8 +1,13 @@
 import { SectionHeading } from "@/app/components/SectionHeading";
+import { renderWithLinks } from "@/app/lib/rich-text";
 
 /* Addresses the objections B2B buyers raise before outsourcing prospecting.
    Native <details> = accessible and works with zero JavaScript. */
-const faqs = [
+const faqs: {
+  question: string;
+  answer: string;
+  links?: { text: string; href: string }[];
+}[] = [
   {
     question: "How is this different from hiring an in-house SDR?",
     answer:
@@ -27,6 +32,7 @@ const faqs = [
     question: "Where does your data come from, and is it GDPR-compliant?",
     answer:
       "We source from licensed B2B data providers and verify every record before outreach. All processing is in line with UK GDPR — we use legitimate interest for B2B contact, document lawful basis, and honour opt-outs immediately. Full detail in our privacy policy.",
+    links: [{ text: "privacy policy", href: "/privacy" }],
   },
   {
     question: "Who actually does the outreach — your team, or offshore?",
@@ -52,6 +58,7 @@ const faqs = [
     question: "What does it cost?",
     answer:
       "Outbound starts at £2,500/month; Full Pipeline at £3,500/month — both month-to-month. See the pricing section above for what's included, or book a call and we'll scope something custom.",
+    links: [{ text: "pricing section", href: "#pricing" }],
   },
 ];
 
@@ -101,7 +108,7 @@ export function Faq() {
                 </span>
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                {faq.answer}
+                {renderWithLinks(faq.answer, faq.links)}
               </p>
             </details>
           ))}

@@ -59,8 +59,16 @@ export type Service = {
     points: { title: string; body: string }[];
   };
 
-  /** Service-specific FAQ. */
-  faqs: { question: string; answer: string }[];
+  /** Service-specific FAQ. `links` turns phrases in the answer into
+      internal links (first occurrence of each phrase). */
+  faqs: {
+    question: string;
+    answer: string;
+    links?: { text: string; href: string }[];
+  }[];
+
+  /** Slug of a case study that proves this service, shown mid-page. */
+  caseStudy?: string;
 
   /** Slugs of related services shown at the foot of the page. */
   related: string[];
@@ -210,6 +218,7 @@ export const services: Service[] = [
           "Yes. We source from licensed B2B data providers and verify every record. All processing is in line with UK GDPR, with documented lawful basis and immediate honouring of opt-outs.",
       },
     ],
+    caseStudy: "home-lead-gen",
     related: ["b2b-appointment-setting", "b2b-lead-generation"],
   },
 
@@ -354,8 +363,16 @@ export const services: Service[] = [
         question: "How is this different from cold calling?",
         answer:
           "Cold calling opens conversations directly by phone; LinkedIn inbound warms prospects so they come to you. Many clients run both — see our cold calling and appointment setting services.",
+        links: [
+          { text: "cold calling", href: "/services/cold-calling" },
+          {
+            text: "appointment setting",
+            href: "/services/b2b-appointment-setting",
+          },
+        ],
       },
     ],
+    caseStudy: "fast-digital-marketing",
     related: ["cold-calling", "b2b-appointment-setting"],
   },
 
@@ -495,6 +512,7 @@ export const services: Service[] = [
         question: "Which channels do you use to book meetings?",
         answer:
           "Whichever your buyers respond to — typically a mix of cold calling, email, and LinkedIn run together. We tune the channel mix to your market.",
+        links: [{ text: "cold calling", href: "/services/cold-calling" }],
       },
       {
         question: "How soon will meetings start landing?",
@@ -502,6 +520,7 @@ export const services: Service[] = [
           "Most clients see their first qualified meetings within two to three weeks, once lists are built and messaging is approved, then a steady cadence builds from there.",
       },
     ],
+    caseStudy: "fast-digital-marketing",
     related: ["cold-calling", "b2b-lead-generation"],
   },
 
@@ -636,6 +655,13 @@ export const services: Service[] = [
         question: "Do you just provide a list, or run the outreach too?",
         answer:
           "Either. We can hand over a clean, qualified list for your team to work, or run the full motion — cold calling, LinkedIn, and appointment setting — on top of it.",
+        links: [
+          { text: "cold calling", href: "/services/cold-calling" },
+          {
+            text: "appointment setting",
+            href: "/services/b2b-appointment-setting",
+          },
+        ],
       },
       {
         question: "How do you define our ideal customer profile?",
@@ -648,6 +674,7 @@ export const services: Service[] = [
           "Lists are verified before delivery and refreshed monthly, so your pipeline runs on current, accurate contact data rather than a one-off scrape that decays.",
       },
     ],
+    caseStudy: "ecommerce-development-agency",
     related: ["b2b-appointment-setting", "cold-calling"],
   },
 ];

@@ -11,6 +11,7 @@ import { Pricing } from "@/app/components/Pricing";
 import { Faq } from "@/app/components/Faq";
 import { FinalCta } from "@/app/components/FinalCta";
 import { MidPageCta } from "@/app/components/MidPageCta";
+import { PipelineAudit } from "@/app/components/PipelineAudit";
 import { site } from "@/app/lib/site";
 
 /* Structured data — helps search engines understand the business.
@@ -73,6 +74,7 @@ export default function HomePage() {
 
       <Team />
       <Pricing />
+      <PipelineAudit />
       <Faq />
       <FinalCta />
     </>

@@ -270,3 +270,8 @@ export const caseStudies: CaseStudy[] = [
     },
   },
 ];
+
+/** Look up a single case study by slug. */
+export function getCaseStudy(slug: string): CaseStudy | undefined {
+  return caseStudies.find((c) => c.slug === slug);
+}

@@ -5,6 +5,8 @@ import { Cta } from "@/app/components/Cta";
 import { MidPageCta } from "@/app/components/MidPageCta";
 import { VideoPlayer } from "@/app/components/VideoPlayer";
 import { services, getService } from "@/app/lib/services";
+import { getCaseStudy } from "@/app/lib/case-studies";
+import { renderWithLinks } from "@/app/lib/rich-text";
 import { site } from "@/app/lib/site";
 import { video } from "@/app/lib/video";
 
@@ -61,6 +63,10 @@ export default async function ServiceDetailPage({ params }: Props) {
   const related = service.related
     .map((s) => getService(s))
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
+
+  const caseStudy = service.caseStudy
+    ? getCaseStudy(service.caseStudy)
+    : undefined;
 
   /* Structured data — describes this specific service to search engines. */
   const jsonLd = {
@@ -420,13 +426,66 @@ export default async function ServiceDetailPage({ params }: Props) {
                   </span>
                 </summary>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                  {faq.answer}
+                  {renderWithLinks(faq.answer, faq.links)}
                 </p>
               </details>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Proof — a real result delivered with this service */}
+      {caseStudy && (
+        <section className="bg-slate-50 py-16 sm:py-20">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <p className="text-sm font-semibold uppercase tracking-wide text-brand">
+              Proof
+            </p>
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              See it in action
+            </h2>
+
+            <Link
+              href={`/case-studies/${caseStudy.slug}`}
+              className="group mt-8 flex flex-col gap-6 rounded-2xl border border-slate-200 bg-white p-7 transition-shadow hover:shadow-lg sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div className="max-w-2xl">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  {caseStudy.industry}
+                </p>
+                <p className="mt-2 text-lg font-semibold leading-snug text-slate-900">
+                  {caseStudy.headline}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                  Read the {caseStudy.client} case study
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    className="transition-transform group-hover:translate-x-0.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+              <div className="shrink-0 rounded-2xl bg-brand-tint px-7 py-5 text-center">
+                <span className="block text-4xl font-bold tracking-tight text-brand-dark">
+                  {caseStudy.summary.primaryMetric.value}
+                </span>
+                <span className="mt-1 block text-sm font-medium text-slate-600">
+                  {caseStudy.summary.primaryMetric.label}
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Related services */}
       {related.length > 0 && (
