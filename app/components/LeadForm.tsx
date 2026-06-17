@@ -14,7 +14,9 @@ import { site } from "@/app/lib/site";
  * Until the key is set, the form still renders and the "book a call"
  * fallback below it always works.
  */
-const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+const ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ??
+  "dd65e826-1cb2-49ae-9d37-76a88860c97c";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
