@@ -1,6 +1,9 @@
 import { Hero } from "@/app/components/Hero";
 import { LogoBar } from "@/app/components/LogoBar";
 import { Services } from "@/app/components/Services";
+import { Comparison } from "@/app/components/Comparison";
+import { Pillars } from "@/app/components/Pillars";
+import { Guarantee } from "@/app/components/Guarantee";
 import { Process } from "@/app/components/Process";
 import { CampaignTimeline } from "@/app/components/CampaignTimeline";
 import { Results } from "@/app/components/Results";
@@ -51,6 +54,8 @@ export default function HomePage() {
       <Hero />
       <LogoBar />
       <Services />
+      <Comparison />
+      <Pillars />
 
       {/* Capture visitors who just recognised what they need */}
       <MidCtaSection
@@ -73,6 +78,7 @@ export default function HomePage() {
       />
 
       <Team />
+      <Guarantee />
       <Pricing />
       <PipelineAudit />
       <Faq />
