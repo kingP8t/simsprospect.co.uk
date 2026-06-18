@@ -69,7 +69,7 @@ export const pricing = [
  * legally significant text.
  */
 export const legal = {
-  companyName: "SIMS PROSPECTS Ltd", // registered company name
+  companyName: "Awesome Creations LTD TRADING AS SIMS PROSPECTS", // registered company name
   companyNumber: "[Companies House number]", // e.g. 12345678
   address: "[registered office address]",
   icoNumber: "[ICO registration number]",
