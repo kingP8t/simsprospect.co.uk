@@ -15,21 +15,32 @@ type Testimonial = {
 };
 
 /**
- * ⚠️ CONFIRM — placeholder testimonials. Replace with real, attributable
- * quotes (name, role, company) once you have client permission.
+ * Real client testimonials. These are verbatim excerpts from the quotes in
+ * `case-studies.ts` — the case study cards on the homepage show the stats,
+ * this section surfaces the clients' own words.
+ *
+ * ⚠️ Only add quotes you have permission to publish, attributed to a real
+ * person. Never invent or embellish — misleading testimonials breach UK
+ * ASA/CAP rules.
  */
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Within the first month our reps had a full week of qualified calls. We stopped guessing where next quarter's pipeline would come from.",
-    name: "Placeholder Name",
-    role: "Head of Sales, B2B SaaS company",
+      "They became an extension of our team. 186 qualified appointments delivered. The ROI was undeniable — and we didn't have to hire a single salesperson.",
+    name: "Mikhail Antonchanka",
+    role: "Home Lead Gen",
   },
   {
     quote:
-      "The meetings are genuinely qualified — they match our ICP and the prospects show up ready to talk. That was never true with our old list.",
-    name: "Placeholder Name",
-    role: "Founder, Recruitment agency",
+      "SIMS PROSPECTS took over the outbound process, and the demos came in steadily — the lead quality was exceptionally strong. Outbound became stable and reliable, something we couldn't achieve on our own before.",
+    name: "Fatima Ahmed",
+    role: "Product Lead Manager, Fast Digital Marketing",
+  },
+  {
+    quote:
+      "In three months, SIMS PROSPECTS delivered 15 qualified appointments and met all our KPIs. They learned our product, refined our ICP, and built outreach that worked.",
+    name: "Mr Burn",
+    role: "Director, e-commerce development agency",
   },
 ];
 
@@ -42,7 +53,7 @@ export function Testimonials() {
           title="What clients say"
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {testimonials.map((item) => (
             <figure
               key={item.role}

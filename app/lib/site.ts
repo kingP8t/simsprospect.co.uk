@@ -21,7 +21,7 @@ export const founder = {
   name: "King",
   role: "Founder, SIMS PROSPECTS",
   /** Drop a square photo at /public/founder.jpg or update the path. */
-  photoSrc: "/founder.jpg",
+  photoSrc: "/videos/founder-intro.jpg",
   bio: "King founded SIMS PROSPECTS to give B2B teams a predictable pipeline without growing their headcount. He works hands-on with every client to design the campaign, sharpen the offer, and book the meetings that move your number.",
   linkedinUrl: "https://www.linkedin.com/in/kingoladpeter/", // ⚠️ CONFIRM
 } as const;
