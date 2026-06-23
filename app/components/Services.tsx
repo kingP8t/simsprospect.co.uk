@@ -40,6 +40,13 @@ const icons: Record<string, React.ReactNode> = {
       <path d="m21 21-4.3-4.3" />
     </svg>
   ),
+  "account-based-marketing": (
+    <svg {...iconProps} aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="4.5" />
+      <path d="M12 1v3M12 20v3M1 12h3M20 12h3" />
+    </svg>
+  ),
 };
 
 export function Services() {
@@ -49,10 +56,10 @@ export function Services() {
         <SectionHeading
           eyebrow="What we do"
           title="Outsource the prospecting, keep the closing"
-          intro="Four services that work on their own or together — built to fill your pipeline with meetings your reps actually want to take."
+          intro="Five services that work on their own or together — built to fill your pipeline with meetings your reps actually want to take."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
               key={service.slug}

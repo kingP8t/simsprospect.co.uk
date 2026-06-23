@@ -677,6 +677,165 @@ export const services: Service[] = [
     caseStudy: "ecommerce-development-agency",
     related: ["b2b-appointment-setting", "cold-calling"],
   },
+
+  {
+    slug: "account-based-marketing",
+    name: "Account-based marketing",
+    cardDescription:
+      "A focused campaign into a hand-picked list of high-value accounts — multi-threading every decision-maker on the buying committee.",
+    cardOutcome: "Deeper traction in the accounts worth winning.",
+    metaTitle: "Account-Based Marketing (ABM) Services",
+    metaDescription:
+      "Targeted ABM for B2B teams: we hand-pick your highest-value accounts, map the full buying committee, and run coordinated outreach across phone, email, and LinkedIn to book meetings inside the accounts that move your number.",
+    hero: {
+      eyebrow: "Account-based marketing",
+      title: "Win the accounts that actually move your number",
+      subtitle:
+        "Instead of chasing volume, we pick a tight list of your highest-value accounts, map every decision-maker on the buying committee, and run coordinated outreach until you're in the room — phone, email, and LinkedIn working as one play.",
+      stats: [
+        { value: "Tier-1", label: "accounts, hand-picked with you" },
+        { value: "Multi-threaded", label: "every buyer in the committee" },
+      ],
+    },
+    problem: {
+      title: "Your biggest accounts won't be won by spray-and-pray",
+      intro:
+        "The deals that change your year are complex — four to ten people decide, and a generic blast never reaches them. Run as broad outbound, the accounts that matter most slip through:",
+      points: [
+        "One contact per account isn't enough — the deal stalls the moment your champion goes quiet or leaves.",
+        "Generic messaging gets ignored by senior buyers who can spot a templated sequence in a second.",
+        "Sales and marketing pull in different directions, so the account never gets a coordinated, consistent story.",
+        "Budget gets spread thin across thousands of low-fit names instead of concentrated on the accounts you'd most love to win.",
+      ],
+    },
+    outcomes: [
+      {
+        value: "Hand-picked",
+        label: "Target accounts",
+        sublabel: "A tight tier-1 list chosen with you, not a broad scrape",
+      },
+      {
+        value: "Whole committee",
+        label: "Engaged",
+        sublabel: "Every decision-maker mapped and reached, not just one contact",
+      },
+      {
+        value: "Coordinated",
+        label: "Multi-channel",
+        sublabel: "Phone, email, and LinkedIn telling one consistent story",
+      },
+      {
+        value: "Account-level",
+        label: "Reporting",
+        sublabel: "Engagement and meetings tracked account by account",
+      },
+    ],
+    deliverables: {
+      title: "What's included",
+      intro:
+        "A complete account-based motion — from picking the right accounts to getting your team in the room with the people who decide.",
+      items: [
+        {
+          title: "Target account selection & tiering",
+          body: "We build your ICP, then choose and rank the specific accounts worth a concentrated effort — so every hour of outreach goes where the upside is.",
+        },
+        {
+          title: "Buying committee mapping",
+          body: "We identify and verify every decision-maker and influencer inside each account — not just one name — so the deal doesn't hinge on a single contact.",
+        },
+        {
+          title: "Account research & insights",
+          body: "We research each account's priorities, triggers, and tech stack, so the outreach speaks to what that specific business is dealing with right now.",
+        },
+        {
+          title: "Persona-specific messaging",
+          body: "A different message for the finance lead than the head of ops. We write angles tailored to each role on the committee — approved by you before anything goes out.",
+        },
+        {
+          title: "Coordinated multi-channel outreach",
+          body: "Cold calling, email, and LinkedIn run together against each account, so your story lands consistently from every direction.",
+        },
+        {
+          title: "Account-level reporting",
+          body: "We report engagement and booked meetings account by account, so you can see exactly which target accounts are warming up.",
+        },
+      ],
+    },
+    process: {
+      title: "How we run it",
+      steps: [
+        {
+          title: "Pick the accounts",
+          body: "We define your ICP and agree the tier-1 list together — the specific logos worth a focused, multi-touch campaign.",
+        },
+        {
+          title: "Map the committee",
+          body: "For each account we identify and verify every relevant decision-maker, then build the persona-specific angles that will reach them.",
+        },
+        {
+          title: "Run the play",
+          body: "Phone, email, and LinkedIn run together into each account — coordinated, consistent, and multi-threaded across the committee.",
+        },
+        {
+          title: "Measure & expand",
+          body: "We track engagement account by account, double down where accounts are warming, and refine messaging as the conversations open.",
+        },
+      ],
+    },
+    why: {
+      title: "Why account-based beats volume here",
+      points: [
+        {
+          title: "Concentration, not scatter",
+          body: "Effort is focused on the handful of accounts that would genuinely move your number — so each one gets the attention it deserves.",
+        },
+        {
+          title: "Multi-threaded by design",
+          body: "We reach the whole buying committee, so the deal survives a champion going quiet and progresses faster with more people bought in.",
+        },
+        {
+          title: "Run as one team",
+          body: "We work as an extension of your sales effort, with one coordinated story across every channel and warm handoffs when meetings land.",
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: "How is ABM different from your lead generation service?",
+        answer:
+          "Lead generation casts wider to build a pipeline on fit; ABM goes narrow and deep on a hand-picked list of high-value accounts, reaching the whole buying committee in each. Many teams run lead generation for breadth and ABM for their most important targets.",
+        links: [
+          { text: "lead generation", href: "/services/b2b-lead-generation" },
+        ],
+      },
+      {
+        question: "How many accounts do you target?",
+        answer:
+          "Usually a focused tier-1 list — tens of accounts rather than thousands — chosen with you. ABM works best when effort is concentrated on the accounts where a win is worth the most, so we keep the list deliberately tight.",
+      },
+      {
+        question: "Which channels do you use?",
+        answer:
+          "Cold calling, email, and LinkedIn, run together against each account so your message lands consistently from every direction. We tune the channel mix to where each committee actually responds.",
+        links: [
+          { text: "cold calling", href: "/services/cold-calling" },
+          { text: "LinkedIn", href: "/services/linkedin-inbound-marketing" },
+        ],
+      },
+      {
+        question: "How long before we see results?",
+        answer:
+          "Because target accounts are complex and multi-stakeholder, ABM is a longer game than broad outbound — but you'll see account engagement build within weeks, with qualified meetings inside target accounts following as the committee warms up.",
+      },
+      {
+        question: "Is your data and outreach GDPR-compliant?",
+        answer:
+          "Yes. We source from licensed B2B data providers and verify every record, with all processing in line with UK GDPR — documented lawful basis and immediate opt-out handling.",
+      },
+    ],
+    caseStudy: "fast-digital-marketing",
+    related: ["b2b-lead-generation", "b2b-appointment-setting"],
+  },
 ];
 
 /** Look up a single service by slug. */

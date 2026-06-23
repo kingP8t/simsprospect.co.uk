@@ -15,6 +15,10 @@ const footerNav = {
       href: "/services/b2b-appointment-setting",
     },
     { label: "B2B lead generation", href: "/services/b2b-lead-generation" },
+    {
+      label: "Account-based marketing",
+      href: "/services/account-based-marketing",
+    },
   ],
   Company: [
     { label: "How it works", href: "#process" },
