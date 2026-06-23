@@ -43,12 +43,30 @@ export function Footer() {
               A predictable pipeline of qualified B2B meetings — built through
               cold calling, LinkedIn, and appointment setting.
             </p>
-            <a
-              href={`mailto:${site.email}`}
-              className="mt-4 inline-block text-sm font-medium text-brand hover:text-brand-dark"
-            >
-              {site.email}
-            </a>
+            <dl className="mt-4 space-y-2 text-sm">
+              <div>
+                <dt className="text-slate-500">Project support enquiries</dt>
+                <dd>
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="font-medium text-brand hover:text-brand-dark"
+                  >
+                    {site.email}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-slate-500">Sales enquiries</dt>
+                <dd>
+                  <a
+                    href={`mailto:${site.salesEmail}`}
+                    className="font-medium text-brand hover:text-brand-dark"
+                  >
+                    {site.salesEmail}
+                  </a>
+                </dd>
+              </div>
+            </dl>
           </div>
 
           {Object.entries(footerNav).map(([heading, links]) => (

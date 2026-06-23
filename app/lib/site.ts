@@ -8,7 +8,8 @@ export const site = {
   description:
     "SIMS PROSPECTS builds a predictable pipeline of qualified meetings for B2B teams through cold calling, LinkedIn outreach, and appointment setting.",
   url: "https://simsprospects.co.uk",
-  email: "hello@simsprospects.co.uk", // ⚠️ CONFIRM mailbox exists
+  email: "hello@simsprospects.co.uk", // project support enquiries — ⚠️ CONFIRM mailbox exists
+  salesEmail: "king@simsprospects.co.uk", // sales enquiries — ⚠️ CONFIRM mailbox exists
   // Cal.com discovery-call link
   bookingUrl: "https://cal.com/simsprospect/30min",
 } as const;
