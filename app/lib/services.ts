@@ -3,7 +3,7 @@
  *   - the service card on the homepage `#services` section
  *   - the full service landing page at /services/{slug}
  *
- * Add a new service by appending an object to `services` — the route,
+ * Add a new service by appending an object to `services`, the route,
  * homepage card, and footer links update automatically.
  *
  * The page structure mirrors a high-converting B2B agency service page:
@@ -30,7 +30,7 @@ export type Service = {
     stats: { value: string; label: string }[];
   };
 
-  /** "Is this you?" — the problem the service solves. */
+  /** "Is this you?", the problem the service solves. */
   problem: {
     title: string;
     intro: string;
@@ -83,24 +83,24 @@ export const services: Service[] = [
     cardOutcome: "Conversations with decision-makers, not gatekeepers.",
     metaTitle: "B2B Cold Calling Services",
     metaDescription:
-      "Trained UK-based cold callers open conversations with decision-makers in your target accounts — and book qualified meetings straight onto your calendar.",
+      "Trained UK-based cold callers open conversations with decision-makers in your target accounts, and book qualified meetings straight onto your calendar.",
     hero: {
       eyebrow: "Cold calling",
       title: "Conversations with decision-makers, booked by people who do this all day",
       subtitle:
-        "We run outbound calling into your target accounts with trained callers, sharp messaging, and a number to plan around — so your reps spend their time closing, not dialling.",
+        "We run outbound calling into your target accounts with trained callers, sharp messaging, and a number to plan around, so your reps spend their time closing, not dialling.",
       stats: [
         { value: "100+", label: "dials per caller, per day" },
         { value: "2–3 wks", label: "to first booked meetings" },
       ],
     },
     problem: {
-      title: "Cold calling works — when it's done properly",
+      title: "Cold calling works, but only when it's done properly",
       intro:
         "Most teams know the phone still books meetings. The problem is making it consistent. Done off the side of a desk, it stalls fast:",
       points: [
         "Reps avoid the phone, so dial volume never reaches the level that produces meetings.",
-        "Scripts sound like scripts — gatekeepers screen them out before they reach the decision-maker.",
+        "Scripts sound like scripts, so gatekeepers screen them out before they reach the decision-maker.",
         "No call data, so you can't tell what's working or what to change.",
         "Hiring and training an in-house caller takes months and carries real overhead.",
       ],
@@ -109,7 +109,7 @@ export const services: Service[] = [
       {
         value: "100+",
         label: "Dials per day",
-        sublabel: "Per caller — the volume that actually produces conversations",
+        sublabel: "Per caller, the volume that actually produces conversations",
       },
       {
         value: "Decision-makers",
@@ -130,7 +130,7 @@ export const services: Service[] = [
     deliverables: {
       title: "What's included",
       intro:
-        "Everything needed to turn the phone into a reliable channel — without you managing any of it.",
+        "Everything needed to turn the phone into a reliable channel, without you managing any of it.",
       items: [
         {
           title: "Trained callers on your campaign",
@@ -138,7 +138,7 @@ export const services: Service[] = [
         },
         {
           title: "Messaging built around your offer",
-          body: "Call openers, talk tracks, and objection responses written around what you sell and who you sell to — approved by you before anything goes out.",
+          body: "Call openers, talk tracks, and objection responses written around what you sell and who you sell to, approved by you before anything goes out.",
         },
         {
           title: "Verified target list",
@@ -146,7 +146,7 @@ export const services: Service[] = [
         },
         {
           title: "Meetings booked direct to your calendar",
-          body: "Interested, qualified prospects are booked straight onto your reps' calendars — confirmed and ready to run.",
+          body: "Interested, qualified prospects are booked straight onto your reps' calendars, confirmed and ready to run.",
         },
         {
           title: "Call-level reporting",
@@ -163,11 +163,11 @@ export const services: Service[] = [
       steps: [
         {
           title: "ICP & offer workshop",
-          body: "We map your ideal customer, your offer, and the objections you hear most — then turn that into talk tracks you approve.",
+          body: "We map your ideal customer, your offer, and the objections you hear most, then turn that into talk tracks you approve.",
         },
         {
           title: "List build & caller briefing",
-          body: "We build and verify your target list and brief the callers so they sound like they know your business — because they will.",
+          body: "We build and verify your target list and brief the callers so they sound like they know your business, because they will.",
         },
         {
           title: "Dial, connect, book",
@@ -184,7 +184,7 @@ export const services: Service[] = [
       points: [
         {
           title: "No ramp, no overhead",
-          body: "A trained team and a proven process from week one — no recruiting, onboarding, or management on your side.",
+          body: "A trained team and a proven process from week one, no recruiting, onboarding, or management on your side.",
         },
         {
           title: "Quality over noise",
@@ -210,7 +210,7 @@ export const services: Service[] = [
       {
         question: "Do we approve the script?",
         answer:
-          "Always. You sign off the openers, talk tracks, and objection responses before any dials are made — and we refine them with you as the campaign runs.",
+          "Always. You sign off the openers, talk tracks, and objection responses before any dials are made, and we refine them with you as the campaign runs.",
       },
       {
         question: "Is your data GDPR-compliant?",
@@ -235,18 +235,18 @@ export const services: Service[] = [
       eyebrow: "LinkedIn inbound marketing",
       title: "Become the company buyers already know before the first call",
       subtitle:
-        "We combine authority-building content with targeted LinkedIn outreach so qualified prospects come to a conversation already warm — not cold and sceptical.",
+        "We combine authority-building content with targeted LinkedIn outreach so qualified prospects come to a conversation already warm, not cold and sceptical.",
       stats: [
         { value: "Warmer", label: "every conversation starts ahead" },
         { value: "2-way", label: "content + outreach, run together" },
       ],
     },
     problem: {
-      title: "Your buyers are on LinkedIn — but they don't know you yet",
+      title: "Your buyers are on LinkedIn, but they don't know you yet",
       intro:
         "LinkedIn is where your market researches, compares, and decides. Most B2B teams leave that ground uncovered:",
       points: [
-        "Founders and leaders know they should post, but never find the time — so the profile goes quiet.",
+        "Founders and leaders know they should post, but never find the time, so the profile goes quiet.",
         "Pure cold outreach gets ignored because there's no presence behind it to make it credible.",
         "Connections pile up but nothing turns into a conversation, let alone a meeting.",
         "No system ties the content and the outreach together, so neither compounds.",
@@ -277,11 +277,11 @@ export const services: Service[] = [
     deliverables: {
       title: "What's included",
       intro:
-        "A complete LinkedIn motion — presence and outreach run as one system, so they reinforce each other.",
+        "A complete LinkedIn motion, presence and outreach run as one system, so they reinforce each other.",
       items: [
         {
           title: "Content that builds authority",
-          body: "A steady stream of posts written in your voice, around the problems your buyers care about — so your profile works for you while you work.",
+          body: "A steady stream of posts written in your voice, around the problems your buyers care about, so your profile works for you while you work.",
         },
         {
           title: "Optimised profile",
@@ -293,7 +293,7 @@ export const services: Service[] = [
         },
         {
           title: "Conversation & qualification",
-          body: "We nurture replies, answer questions, and qualify interest — then book the genuinely interested onto your calendar.",
+          body: "We nurture replies, answer questions, and qualify interest, then book the genuinely interested onto your calendar.",
         },
         {
           title: "Engagement that compounds",
@@ -301,7 +301,7 @@ export const services: Service[] = [
         },
         {
           title: "Reporting on what matters",
-          body: "Connections, replies, conversations, and booked meetings — reported weekly so you can see the pipeline building.",
+          body: "Connections, replies, conversations, and booked meetings, reported weekly so you can see the pipeline building.",
         },
       ],
     },
@@ -318,7 +318,7 @@ export const services: Service[] = [
         },
         {
           title: "Targeted outreach",
-          body: "We connect with ICP-fit decision-makers and start real conversations — warmed by the presence you now have.",
+          body: "We connect with ICP-fit decision-makers and start real conversations, warmed by the presence you now have.",
         },
         {
           title: "Convert & report",
@@ -335,7 +335,7 @@ export const services: Service[] = [
         },
         {
           title: "Written in your voice",
-          body: "You approve the positioning and tone. The content sounds like you — not like a content mill.",
+          body: "You approve the positioning and tone. The content sounds like you, not like a content mill.",
         },
         {
           title: "Built to compound",
@@ -347,7 +347,7 @@ export const services: Service[] = [
       {
         question: "Do you post from my personal profile or a company page?",
         answer:
-          "Usually your personal profile — personal brands drive far more reach and trust on LinkedIn than company pages. We can support the company page alongside it if that fits your strategy.",
+          "Usually your personal profile, personal brands drive far more reach and trust on LinkedIn than company pages. We can support the company page alongside it if that fits your strategy.",
       },
       {
         question: "Will the content actually sound like me?",
@@ -362,7 +362,7 @@ export const services: Service[] = [
       {
         question: "How is this different from cold calling?",
         answer:
-          "Cold calling opens conversations directly by phone; LinkedIn inbound warms prospects so they come to you. Many clients run both — see our cold calling and appointment setting services.",
+          "Cold calling opens conversations directly by phone; LinkedIn inbound warms prospects so they come to you. Many clients run both, see our cold calling and appointment setting services.",
         links: [
           { text: "cold calling", href: "/services/cold-calling" },
           {
@@ -380,16 +380,16 @@ export const services: Service[] = [
     slug: "b2b-appointment-setting",
     name: "B2B appointment setting",
     cardDescription:
-      "We qualify interest and book vetted meetings straight onto your sales team's calendar — confirmed and ready to run.",
+      "We qualify interest and book vetted meetings straight onto your sales team's calendar, confirmed and ready to run.",
     cardOutcome: "A calendar of meetings that fit your ideal customer.",
     metaTitle: "B2B Appointment Setting Services",
     metaDescription:
-      "We qualify interest and book vetted, confirmed meetings straight onto your sales team's calendar — so your reps walk into conversations with real, ICP-fit buyers.",
+      "We qualify interest and book vetted, confirmed meetings straight onto your sales team's calendar, so your reps walk into conversations with real, ICP-fit buyers.",
     hero: {
       eyebrow: "B2B appointment setting",
       title: "A calendar full of meetings that actually fit your ideal customer",
       subtitle:
-        "We own the outbound motion end-to-end — prospecting, messaging, and qualification — and hand your reps only meetings that are vetted, confirmed, and ready to run.",
+        "We own the whole outbound motion (prospecting, messaging, and qualification) and hand your reps only meetings that are vetted, confirmed, and ready to run.",
       stats: [
         { value: "Vetted", label: "every meeting clears your bar" },
         { value: "Direct", label: "booked onto your reps' calendars" },
@@ -400,7 +400,7 @@ export const services: Service[] = [
       intro:
         "Appointment setting is where outbound either pays off or falls apart. Without a dedicated motion, the cracks show fast:",
       points: [
-        "Reps spend their best hours prospecting instead of selling — so quota slips.",
+        "Reps spend their best hours prospecting instead of selling, so quota slips.",
         "Calendars fill with unqualified meetings that waste time and dent morale.",
         "Pipeline is lumpy and unpredictable, so you can't forecast revenue with confidence.",
         "No-shows go unmanaged, quietly eating into the meetings you did book.",
@@ -431,15 +431,15 @@ export const services: Service[] = [
     deliverables: {
       title: "What's included",
       intro:
-        "A done-for-you appointment-setting motion — you focus on the close, we handle everything up to it.",
+        "A done-for-you appointment-setting motion, you focus on the close, we handle everything up to it.",
       items: [
         {
           title: "ICP & qualification criteria",
-          body: "We agree exactly who counts as a qualified meeting up front, so every booking lands with a real fit — not just anyone who said yes.",
+          body: "We agree exactly who counts as a qualified meeting up front, so every booking lands with a real fit, not just anyone who said yes.",
         },
         {
           title: "Multi-channel outreach",
-          body: "Phone, email, and LinkedIn run together to reach prospects where they respond — managed end-to-end by our team.",
+          body: "Phone, email, and LinkedIn run together to reach prospects where they respond, managed end-to-end by our team.",
         },
         {
           title: "Interest qualification",
@@ -451,11 +451,11 @@ export const services: Service[] = [
         },
         {
           title: "No-show management",
-          body: "We confirm, remind, re-engage no-shows, and reschedule — and report show rate every week so it stays high.",
+          body: "We confirm, remind, re-engage no-shows, and reschedule, and report show rate every week so it stays high.",
         },
         {
           title: "Weekly pipeline reporting",
-          body: "Meetings booked, show rate, and pipeline created — plus a clear view of what we're changing to lift results.",
+          body: "Meetings booked, show rate, and pipeline created, plus a clear view of what we're changing to lift results.",
         },
       ],
     },
@@ -476,7 +476,7 @@ export const services: Service[] = [
         },
         {
           title: "Protect & report",
-          body: "We manage confirmations and no-shows and report show rate and pipeline weekly — then refine to lift both.",
+          body: "We manage confirmations and no-shows and report show rate and pipeline weekly, then refine to lift both.",
         },
       ],
     },
@@ -485,7 +485,7 @@ export const services: Service[] = [
       points: [
         {
           title: "Quality is the whole point",
-          body: "We're measured on qualified, attended meetings — not vanity volume. Your reps' time is the metric we protect.",
+          body: "We're measured on qualified, attended meetings, not vanity volume. Your reps' time is the metric we protect.",
         },
         {
           title: "Part of your sales team",
@@ -493,7 +493,7 @@ export const services: Service[] = [
         },
         {
           title: "Show rate, managed",
-          body: "Confirmations, reminders, and no-show re-engagement are built in — so booked meetings actually happen.",
+          body: "Confirmations, reminders, and no-show re-engagement are built in, so booked meetings actually happen.",
         },
       ],
     },
@@ -511,7 +511,7 @@ export const services: Service[] = [
       {
         question: "Which channels do you use to book meetings?",
         answer:
-          "Whichever your buyers respond to — typically a mix of cold calling, email, and LinkedIn run together. We tune the channel mix to your market.",
+          "Whichever your buyers respond to, typically a mix of cold calling, email, and LinkedIn run together. We tune the channel mix to your market.",
         links: [{ text: "cold calling", href: "/services/cold-calling" }],
       },
       {
@@ -532,24 +532,24 @@ export const services: Service[] = [
     cardOutcome: "A steady supply of leads worth your reps' time.",
     metaTitle: "B2B Lead Generation Services",
     metaDescription:
-      "We source, enrich, and qualify leads that match your ideal customer profile — so your pipeline is built on fit, not volume, and your reps only work leads worth their time.",
+      "We source, enrich, and qualify leads that match your ideal customer profile, so your pipeline is built on fit, not volume, and your reps only work leads worth their time.",
     hero: {
       eyebrow: "B2B lead generation",
       title: "A pipeline built on fit, not volume",
       subtitle:
-        "We source, enrich, and qualify leads that match your ideal customer profile — so every lead your reps touch is one worth their time, and your pipeline grows on quality.",
+        "We source, enrich, and qualify leads that match your ideal customer profile, so every lead your reps touch is one worth their time, and your pipeline grows on quality.",
       stats: [
         { value: "Verified", label: "every contact, before outreach" },
         { value: "ICP-fit", label: "leads matched to your profile" },
       ],
     },
     problem: {
-      title: "More leads isn't the goal — better-fit leads is",
+      title: "More leads isn't the goal; better-fit leads is",
       intro:
         "Volume-first lead generation feels productive and quietly kills pipeline. The symptoms are familiar:",
       points: [
         "Lists are broad and stale, so reps waste time chasing people who were never a fit.",
-        "Contact data is wrong — bounced emails and dead numbers burn your sender reputation and your reps' patience.",
+        "Contact data is wrong: bounced emails and dead numbers burn your sender reputation and your reps' patience.",
         "No clear ICP, so 'lead' means anything, and conversion stays low.",
         "Building and verifying lists in-house eats hours your team should spend selling.",
       ],
@@ -579,19 +579,19 @@ export const services: Service[] = [
     deliverables: {
       title: "What's included",
       intro:
-        "A clean, qualified, ready-to-work lead list — so your outreach starts from fit instead of guesswork.",
+        "A clean, qualified, ready-to-work lead list, so your outreach starts from fit instead of guesswork.",
       items: [
         {
           title: "ICP definition",
-          body: "We build a sharp ideal customer profile around firmographics, tech stack, and buying triggers — the foundation every list is sourced against.",
+          body: "We build a sharp ideal customer profile around firmographics, tech stack, and buying triggers, the foundation every list is sourced against.",
         },
         {
           title: "Targeted list building",
-          body: "We source prospects that match the profile, not a broad scrape — so your reps work fit, not volume.",
+          body: "We source prospects that match the profile, not a broad scrape, so your reps work fit, not volume.",
         },
         {
           title: "Contact enrichment",
-          body: "Every record gets a decision-maker name, role, verified email, phone, and LinkedIn — ready for outreach on any channel.",
+          body: "Every record gets a decision-maker name, role, verified email, phone, and LinkedIn, ready for outreach on any channel.",
         },
         {
           title: "Data verification",
@@ -612,7 +612,7 @@ export const services: Service[] = [
       steps: [
         {
           title: "Define the ICP",
-          body: "We work with you to define exactly who fits — firmographics, tech stack, and the buying triggers that signal intent.",
+          body: "We work with you to define exactly who fits, firmographics, tech stack, and the buying triggers that signal intent.",
         },
         {
           title: "Source & enrich",
@@ -624,7 +624,7 @@ export const services: Service[] = [
         },
         {
           title: "Deliver & refresh",
-          body: "We hand over a ready-to-work list and refresh it monthly — and can run the outreach for you if you want it done end-to-end.",
+          body: "We hand over a ready-to-work list and refresh it monthly, and can run the outreach for you if you want it done end-to-end.",
         },
       ],
     },
@@ -633,7 +633,7 @@ export const services: Service[] = [
       points: [
         {
           title: "Built on your ICP",
-          body: "Every lead is sourced against a profile we define with you — so conversion starts higher because fit is higher.",
+          body: "Every lead is sourced against a profile we define with you, so conversion starts higher because fit is higher.",
         },
         {
           title: "Data you can trust",
@@ -649,12 +649,12 @@ export const services: Service[] = [
       {
         question: "Where does your data come from, and is it compliant?",
         answer:
-          "We source from licensed B2B data providers and verify every record before delivery. All processing is in line with UK GDPR — legitimate interest for B2B contact, documented lawful basis, and immediate opt-out handling.",
+          "We source from licensed B2B data providers and verify every record before delivery. All processing is in line with UK GDPR, legitimate interest for B2B contact, documented lawful basis, and immediate opt-out handling.",
       },
       {
         question: "Do you just provide a list, or run the outreach too?",
         answer:
-          "Either. We can hand over a clean, qualified list for your team to work, or run the full motion — cold calling, LinkedIn, and appointment setting — on top of it.",
+          "Either. We can hand over a clean, qualified list for your team to work, or run the full motion (cold calling, LinkedIn, and appointment setting) on top of it.",
         links: [
           { text: "cold calling", href: "/services/cold-calling" },
           {
@@ -682,7 +682,7 @@ export const services: Service[] = [
     slug: "account-based-marketing",
     name: "Account-based marketing",
     cardDescription:
-      "A focused campaign into a hand-picked list of high-value accounts — multi-threading every decision-maker on the buying committee.",
+      "A focused campaign into a hand-picked list of high-value accounts, multi-threading every decision-maker on the buying committee.",
     cardOutcome: "Deeper traction in the accounts worth winning.",
     metaTitle: "Account-Based Marketing (ABM) Services",
     metaDescription:
@@ -691,7 +691,7 @@ export const services: Service[] = [
       eyebrow: "Account-based marketing",
       title: "Win the accounts that actually move your number",
       subtitle:
-        "Instead of chasing volume, we pick a tight list of your highest-value accounts, map every decision-maker on the buying committee, and run coordinated outreach until you're in the room — phone, email, and LinkedIn working as one play.",
+        "Instead of chasing volume, we pick a tight list of your highest-value accounts, map every decision-maker on the buying committee, and run coordinated outreach until you're in the room, phone, email, and LinkedIn working as one play.",
       stats: [
         { value: "Tier-1", label: "accounts, hand-picked with you" },
         { value: "Multi-threaded", label: "every buyer in the committee" },
@@ -700,9 +700,9 @@ export const services: Service[] = [
     problem: {
       title: "Your biggest accounts won't be won by a generic blast",
       intro:
-        "The deals that change your year are complex — four to ten people decide, and a generic blast never reaches them. Run as broad outbound, the accounts that matter most slip through:",
+        "The deals that change your year are complex: four to ten people decide, and a generic blast never reaches them. Run as broad outbound, the accounts that matter most slip through:",
       points: [
-        "One contact per account isn't enough — the deal stalls the moment your champion goes quiet or leaves.",
+        "One contact per account isn't enough, the deal stalls the moment your champion goes quiet or leaves.",
         "Generic messaging gets ignored by senior buyers who can spot a templated sequence in a second.",
         "Sales and marketing pull in different directions, so the account never gets a coordinated, consistent story.",
         "Budget gets spread thin across thousands of low-fit names instead of concentrated on the accounts you'd most love to win.",
@@ -733,15 +733,15 @@ export const services: Service[] = [
     deliverables: {
       title: "What's included",
       intro:
-        "A complete account-based motion — from picking the right accounts to getting your team in the room with the people who decide.",
+        "A complete account-based motion, from picking the right accounts to getting your team in the room with the people who decide.",
       items: [
         {
           title: "Target account selection & tiering",
-          body: "We build your ICP, then choose and rank the specific accounts worth a concentrated effort — so every hour of outreach goes where the upside is.",
+          body: "We build your ICP, then choose and rank the specific accounts worth a concentrated effort, so every hour of outreach goes where the upside is.",
         },
         {
           title: "Buying committee mapping",
-          body: "We identify and verify every decision-maker and influencer inside each account — not just one name — so the deal doesn't hinge on a single contact.",
+          body: "We identify and verify every decision-maker and influencer inside each account, not just one name, so the deal doesn't hinge on a single contact.",
         },
         {
           title: "Account research & insights",
@@ -749,7 +749,7 @@ export const services: Service[] = [
         },
         {
           title: "Persona-specific messaging",
-          body: "A different message for the finance lead than the head of ops. We write angles tailored to each role on the committee — approved by you before anything goes out.",
+          body: "A different message for the finance lead than the head of ops. We write angles tailored to each role on the committee, approved by you before anything goes out.",
         },
         {
           title: "Coordinated multi-channel outreach",
@@ -766,7 +766,7 @@ export const services: Service[] = [
       steps: [
         {
           title: "Pick the accounts",
-          body: "We define your ICP and agree the tier-1 list together — the specific logos worth a focused, multi-touch campaign.",
+          body: "We define your ICP and agree the tier-1 list together, the specific logos worth a focused, multi-touch campaign.",
         },
         {
           title: "Map the committee",
@@ -774,7 +774,7 @@ export const services: Service[] = [
         },
         {
           title: "Run the play",
-          body: "Phone, email, and LinkedIn run together into each account — coordinated, consistent, and multi-threaded across the committee.",
+          body: "Phone, email, and LinkedIn run together into each account, coordinated, consistent, and multi-threaded across the committee.",
         },
         {
           title: "Measure & expand",
@@ -811,7 +811,7 @@ export const services: Service[] = [
       {
         question: "How many accounts do you target?",
         answer:
-          "Usually a focused tier-1 list — tens of accounts rather than thousands — chosen with you. ABM works best when effort is concentrated on the accounts where a win is worth the most, so we keep the list deliberately tight.",
+          "Usually a focused tier-1 list of tens of accounts rather than thousands, chosen with you. ABM works best when effort is concentrated on the accounts where a win is worth the most, so we keep the list deliberately tight.",
       },
       {
         question: "Which channels do you use?",
@@ -825,12 +825,12 @@ export const services: Service[] = [
       {
         question: "How long before we see results?",
         answer:
-          "Because target accounts are complex and multi-stakeholder, ABM is a longer game than broad outbound — but you'll see account engagement build within weeks, with qualified meetings inside target accounts following as the committee warms up.",
+          "Because target accounts are complex and multi-stakeholder, ABM is a longer game than broad outbound, but you'll see account engagement build within weeks, with qualified meetings inside target accounts following as the committee warms up.",
       },
       {
         question: "Is your data and outreach GDPR-compliant?",
         answer:
-          "Yes. We source from licensed B2B data providers and verify every record, with all processing in line with UK GDPR — documented lawful basis and immediate opt-out handling.",
+          "Yes. We source from licensed B2B data providers and verify every record, with all processing in line with UK GDPR, documented lawful basis and immediate opt-out handling.",
       },
     ],
     caseStudy: "fast-digital-marketing",

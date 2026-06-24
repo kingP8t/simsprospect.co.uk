@@ -22,7 +22,7 @@ const milestones = [
     when: "Week 2",
     title: "First conversations land",
     description:
-      "Replies start coming back. Qualified meetings begin appearing on your reps' calendars — usually 5–10 in the first month.",
+      "Replies start coming back. Qualified meetings begin appearing on your reps' calendars, usually 5–10 in the first month.",
   },
   {
     when: "Month 1",
@@ -48,7 +48,7 @@ export function CampaignTimeline() {
         <SectionHeading
           eyebrow="What to expect"
           title="Your campaign, week by week"
-          intro="A clear timeline from kickoff to predictable pipeline — so you know exactly what you're getting, and when."
+          intro="A clear timeline from kickoff to predictable pipeline, so you know exactly what you're getting, and when."
         />
 
         <ol className="mx-auto mt-14 max-w-3xl">

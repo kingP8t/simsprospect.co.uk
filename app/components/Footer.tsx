@@ -44,7 +44,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
-              A predictable pipeline of qualified B2B meetings — built through
+              A predictable pipeline of qualified B2B meetings, built through
               cold calling, LinkedIn, and appointment setting.
             </p>
             <dl className="mt-4 space-y-2 text-sm">

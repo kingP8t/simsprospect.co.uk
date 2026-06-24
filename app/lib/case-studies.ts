@@ -42,14 +42,14 @@ export const caseStudies: CaseStudy[] = [
     industry: "Digital marketing agency",
     date: "January 2025",
     headline:
-      "Marketing agency 3× their pipeline without adding headcount — 186 qualified appointments booked.",
+      "Marketing agency 3× their pipeline without adding headcount, with 186 qualified appointments booked.",
     summary: {
       body: "Home Lead Gen wanted to grow without building an internal sales team. We ran their outbound end-to-end, with messaging tuned for the home services niche they serve.",
       primaryMetric: { value: "186", label: "qualified appointments" },
       secondaryMetric: { value: "£450K", label: "new revenue" },
     },
     about:
-      "Home Lead Gen is a specialised marketing agency focused on the home services industry. They help contractors, home improvement companies, and service providers generate qualified leads through digital marketing — SEO, PPC, and social media advertising.",
+      "Home Lead Gen is a specialised marketing agency focused on the home services industry. They help contractors, home improvement companies, and service providers generate qualified leads through digital marketing: SEO, PPC, and social media advertising.",
     challenges: [
       {
         title: "Scale without hiring",
@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         title: "Niche industry expertise",
-        body: "Reaching home services contractors required understanding their pain points, seasonal patterns, and communication preferences — not a templated outbound playbook.",
+        body: "Reaching home services contractors required real understanding of their pain points, seasonal patterns, and communication preferences, not a templated outbound playbook.",
       },
     ],
     solution: {
@@ -117,17 +117,17 @@ export const caseStudies: CaseStudy[] = [
     slug: "ecommerce-development-agency",
     client: "E-commerce development agency",
     industry: "E-commerce development",
-    // ⚠️ CONFIRM exact month — engagement is ongoing at time of writing.
-    date: "Q1 2026 — ongoing",
+    // ⚠️ CONFIRM exact month; engagement is ongoing at time of writing.
+    date: "Q1 2026 (ongoing)",
     headline:
       "15 qualified sales meetings in 90 days for an e-commerce development agency.",
     summary: {
-      body: "An e-commerce development agency needed a steady pipeline of discovery calls with founders and heads of e-commerce. In three months we delivered 15 qualified appointments and hit 100% of the agreed KPIs — and the engagement is still running.",
+      body: "An e-commerce development agency needed a steady pipeline of discovery calls with founders and heads of e-commerce. In three months we delivered 15 qualified appointments and hit 100% of the agreed KPIs, and the engagement is still running.",
       primaryMetric: { value: "15", label: "qualified sales meetings" },
       secondaryMetric: { value: "100%", label: "of KPIs met" },
     },
     about:
-      "An e-commerce development agency that builds platforms for growing online retailers. Strong delivery work and a steady flow of referrals — but no repeatable outbound channel to put them in front of new founders and heads of e-commerce.",
+      "An e-commerce development agency that builds platforms for growing online retailers. Strong delivery work and a steady flow of referrals, but no repeatable outbound channel to put them in front of new founders and heads of e-commerce.",
     challenges: [
       {
         title: "Outbound was the missing channel",
@@ -144,7 +144,7 @@ export const caseStudies: CaseStudy[] = [
       sections: [
         {
           title: "Built the right list",
-          body: "Their existing target list was too broad. We redefined the ICP and re-sourced contacts against the sharper profile — verified, enriched, and ready for outreach.",
+          body: "Their existing target list was too broad. We redefined the ICP and re-sourced contacts against the sharper profile, then verified, enriched, and made each one ready for outreach.",
           bullets: [
             "Rebuilt the ICP around firmographics, tech stack, and buying triggers",
             "Re-sourced the prospect list against the new profile",
@@ -153,10 +153,10 @@ export const caseStudies: CaseStudy[] = [
         },
         {
           title: "Outreach that sounded like the client",
-          body: "Email sequences and LinkedIn touches written around their actual positioning — not recycled templates. We owned deliverability and replies end-to-end.",
+          body: "Email sequences and LinkedIn touches written around their actual positioning, not recycled templates. We owned deliverability and replies end to end.",
           bullets: [
             "Sequences built around the specific platforms they build on and the results they get",
-            "Domain warm-up and deliverability managed — campaigns landed in primary inboxes",
+            "Domain warm-up and deliverability managed, so campaigns landed in primary inboxes",
             "Replies, objections, and scheduling handled until each meeting was on the calendar",
           ],
         },
@@ -196,20 +196,20 @@ export const caseStudies: CaseStudy[] = [
     slug: "fast-digital-marketing",
     client: "Fast Digital Marketing",
     industry: "B2B SaaS",
-    date: "January 2026 — ongoing",
+    date: "January 2026 (ongoing)",
     headline:
       "137 qualified demos and a steady 12–13 booked appointments every month for a B2B SaaS team.",
     summary: {
-      body: "Fast Digital Marketing needed to scale into new markets but couldn't make outbound stable on their own. We took over the motion end-to-end — and turned an unpredictable channel into a reliable monthly pipeline.",
+      body: "Fast Digital Marketing needed to scale into new markets but couldn't make outbound stable on their own. We took over the motion end to end and turned an unpredictable channel into a reliable monthly pipeline.",
       primaryMetric: { value: "137", label: "qualified demos" },
       secondaryMetric: { value: "12–13/mo", label: "booked appointments" },
     },
     about:
-      "Fast Digital Marketing is a B2B SaaS company that needed a partner to help them scale into new markets and reach the right audiences. Strong product, capable team — but no consistent way to put themselves in front of the right buyers.",
+      "Fast Digital Marketing is a B2B SaaS company that needed a partner to help them scale into new markets and reach the right audiences. Strong product, capable team, but no consistent way to put themselves in front of the right buyers.",
     challenges: [
       {
         title: "Scale into new markets, reliably",
-        body: "They needed a partner to open conversations with the right audiences in new segments. Outbound on their own had been inconsistent — meetings came in fits and starts, with no rhythm to plan revenue around.",
+        body: "They needed a partner to open conversations with the right audiences in new segments. Outbound on their own had been inconsistent: meetings came in fits and starts, with no rhythm to plan revenue around.",
       },
       {
         title: "Lead quality, not just volume",
@@ -218,7 +218,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     solution: {
       intro:
-        "We built and ran a complete outbound program with 2–5 SIMS PROSPECTS team members on the day-to-day — owning prospecting, messaging, scheduling, and qualification end-to-end.",
+        "We built and ran a complete outbound program with 2–5 SIMS PROSPECTS team members on the day-to-day, owning prospecting, messaging, scheduling, and qualification end to end.",
       sections: [
         {
           title: "Done-for-you outbound",
@@ -231,7 +231,7 @@ export const caseStudies: CaseStudy[] = [
         },
         {
           title: "Systematic appointment setting",
-          body: "Every demo on their calendar was a vetted, qualified meeting — not a lead to sort through. Daily outreach kept the volume up; qualification kept the quality up.",
+          body: "Every demo on their calendar was a vetted, qualified meeting, not a lead to sort through. Daily outreach kept the volume up; qualification kept the quality up.",
           bullets: [
             "Daily outreach via email and LinkedIn, including follow-ups and re-engagement",
             "Qualification criteria applied to every lead before scheduling",

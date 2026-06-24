@@ -18,7 +18,7 @@ const rows: { dimension: string; inHouse: string; sims: string }[] = [
   {
     dimension: "Risk if it doesn't work",
     inHouse: "A bad hire costs months and a redundancy process",
-    sims: "Pause or cancel any month — no lock-in",
+    sims: "Pause or cancel any month, no lock-in",
   },
   {
     dimension: "Data & tooling",
@@ -27,7 +27,7 @@ const rows: { dimension: string; inHouse: string; sims: string }[] = [
   },
   {
     dimension: "Coverage",
-    inHouse: "One person — holidays and sick days stop output",
+    inHouse: "One person, so holidays and sick days stop output",
     sims: "A managed team, so activity never goes dark",
   },
   {

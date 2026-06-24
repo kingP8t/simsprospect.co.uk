@@ -306,7 +306,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <MidPageCta
             title="Sound like what your team needs?"
-            body="A focused 30-minute call will tell you whether this is worth doing for your business — free, no obligation."
+            body="A free 30-minute call will tell you whether this is worth doing for your business. No obligation."
             ctaLabel="Book a discovery call"
           />
         </div>
@@ -400,7 +400,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             Questions
           </p>
           <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            {service.name} — common questions
+            {service.name}: common questions
           </h2>
 
           <div className="mt-10 divide-y divide-slate-200 border-y border-slate-200">
@@ -542,9 +542,9 @@ export default async function ServiceDetailPage({ params }: Props) {
             Ready to put {service.name.toLowerCase()} to work?
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600">
-            A focused 30-minute discovery call. We&apos;ll review your current
-            pipeline, where the gaps are, and exactly how we&apos;d book more
-            qualified meetings for your team — free, no obligation.
+            A focused 30-minute discovery call, free and with no obligation.
+            We&apos;ll review your current pipeline, where the gaps are, and
+            exactly how we&apos;d book more qualified meetings for your team.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Cta size="lg">Book a discovery call</Cta>

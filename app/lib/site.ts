@@ -54,7 +54,7 @@ export const pricing = [
     tagline: "Outbound + appointment setting + lead generation, end to end.",
     features: [
       "Everything in Outbound",
-      "B2B appointment setting — meetings booked direct to your calendar",
+      "B2B appointment setting: meetings booked direct to your calendar",
       "Inbound lead qualification & follow-up",
       "Account-management + monthly sales review",
       "Custom messaging & A/B testing every 4 weeks",

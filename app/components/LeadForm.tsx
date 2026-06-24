@@ -62,7 +62,7 @@ export function LeadForm() {
       }
     } catch {
       setStatus("error");
-      setError("Network error — please try again, or book a call below.");
+      setError("Network error. Please try again, or book a call below.");
     }
   }
 
@@ -88,7 +88,7 @@ export function LeadForm() {
           Request received
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Thanks — we&apos;ll be in touch within one working day to set up your
+          Thanks! We&apos;ll be in touch within one working day to set up your
           free pipeline audit.
         </p>
         <a

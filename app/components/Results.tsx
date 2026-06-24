@@ -25,7 +25,7 @@ export function Results() {
             Pipeline you can forecast
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-300">
-            We measure success in booked, qualified meetings — and report on it
+            We measure success in booked, qualified meetings, and report on it
             every week.
           </p>
         </div>

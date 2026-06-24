@@ -198,7 +198,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <MidPageCta
             title="Sound familiar?"
-            body="If these are the challenges holding your pipeline back, let's spend 30 minutes mapping a path out — free, no obligation."
+            body="If these are the challenges holding your pipeline back, let's spend 30 minutes mapping a path out, free and with no obligation."
             ctaLabel="Book a discovery call"
           />
         </div>
@@ -287,7 +287,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <MidPageCta
             title="Want outcomes like this for your team?"
-            body="Book a 30-minute call and we'll walk you through what we'd do for you specifically — based on your industry, ICP, and current pipeline."
+            body="Book a 30-minute call and we'll walk you through what we'd do for you specifically, based on your industry, ICP, and current pipeline."
             ctaLabel="Book your call"
           />
         </div>
@@ -330,9 +330,9 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             Ready to see what we can book for you?
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600">
-            A focused 30-minute discovery call. We&apos;ll review your current
-            pipeline, where the gaps are, and exactly how we&apos;d book more
-            qualified meetings for your team — free, no obligation.
+            A focused 30-minute discovery call, free and with no obligation.
+            We&apos;ll review your current pipeline, where the gaps are, and
+            exactly how we&apos;d book more qualified meetings for your team.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Cta size="lg">Book a discovery call</Cta>

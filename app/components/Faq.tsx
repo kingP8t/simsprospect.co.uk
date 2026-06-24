@@ -11,7 +11,7 @@ const faqs: {
   {
     question: "How is this different from hiring an in-house SDR?",
     answer:
-      "No recruiting, ramp time, or management overhead. You get a trained team and a proven process from week one — and you can scale activity up or down without hiring or firing.",
+      "No recruiting, ramp time, or management overhead. You get a trained team and a proven process from week one, and you can scale activity up or down without hiring or firing.",
   },
   {
     question: "How do you make sure the leads are actually qualified?",
@@ -21,7 +21,7 @@ const faqs: {
   {
     question: "How long until we see booked meetings?",
     answer:
-      "Most clients see their first qualified meetings within the first two to three weeks, once lists are built and messaging is approved. Volume builds steadily from there — see the campaign timeline for the full picture.",
+      "Most clients see their first qualified meetings within the first two to three weeks, once lists are built and messaging is approved. Volume builds steadily from there. See the campaign timeline for the full picture.",
   },
   {
     question: "Do we keep control of the messaging?",
@@ -31,18 +31,18 @@ const faqs: {
   {
     question: "Where does your data come from, and is it GDPR-compliant?",
     answer:
-      "We source from licensed B2B data providers and verify every record before outreach. All processing is in line with UK GDPR — we use legitimate interest for B2B contact, document lawful basis, and honour opt-outs immediately. Full detail in our privacy policy.",
+      "We source from licensed B2B data providers and verify every record before outreach. All processing is in line with UK GDPR: we use legitimate interest for B2B contact, document lawful basis, and honour opt-outs immediately. Full detail in our privacy policy.",
     links: [{ text: "privacy policy", href: "/privacy" }],
   },
   {
-    question: "Who actually does the outreach — your team, or offshore?",
+    question: "Who actually does the outreach: your team, or offshore?",
     answer:
       "Our cold-calling and account-management team is UK-based. Where we use specialist sub-teams (e.g. for high-volume list building or LinkedIn admin), they sit under our day-to-day management and follow your approved messaging.",
   },
   {
     question: "What if a booked meeting no-shows?",
     answer:
-      "We re-engage no-shows and reschedule wherever possible. We report show-rate weekly, and if a campaign trends below benchmark we adjust qualification criteria — at our cost, not yours.",
+      "We re-engage no-shows and reschedule wherever possible. We report show-rate weekly, and if a campaign trends below benchmark we adjust qualification criteria, at our cost, not yours.",
   },
   {
     question: "What KPIs do you report on?",
@@ -52,12 +52,12 @@ const faqs: {
   {
     question: "Can we pause or cancel the campaign?",
     answer:
-      "Yes. All engagements are month-to-month — pause whenever you need to (holiday cover, headcount changes, market shifts) and pick back up without re-onboarding fees.",
+      "Yes. All engagements are month-to-month. Pause whenever you need to (holiday cover, headcount changes, market shifts) and pick back up without re-onboarding fees.",
   },
   {
     question: "What does it cost?",
     answer:
-      "Outbound starts at £2,500/month; Full Pipeline at £3,500/month — both month-to-month. See the pricing section above for what's included, or book a call and we'll scope something custom.",
+      "Outbound starts at £2,500/month; Full Pipeline at £3,500/month, both month-to-month. See the pricing section above for what's included, or book a call and we'll scope something custom.",
     links: [{ text: "pricing section", href: "#pricing" }],
   },
 ];

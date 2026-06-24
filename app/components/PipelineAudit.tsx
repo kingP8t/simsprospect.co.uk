@@ -6,7 +6,7 @@ import { Cta } from "@/app/components/Cta";
 const auditPoints = [
   {
     title: "Where the gaps are",
-    body: "A quick read on your current outbound — what's working, what's leaking, and where meetings are being lost.",
+    body: "A quick read on your current outbound: what's working, what's leaking, and where meetings are being lost.",
   },
   {
     title: "What we'd change",
@@ -14,7 +14,7 @@ const auditPoints = [
   },
   {
     title: "The numbers to expect",
-    body: "A realistic view of the pipeline and booked meetings you could plan around — no inflated promises.",
+    body: "A realistic view of the pipeline and booked meetings you could plan around, with no inflated promises.",
   },
 ];
 
@@ -27,7 +27,7 @@ export function PipelineAudit() {
             Free pipeline audit
           </p>
           <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            See where your pipeline is leaking — before you spend a penny
+            See where your pipeline is leaking, before you spend a penny
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-300">
             Book a focused 30-minute call and we&apos;ll audit your current

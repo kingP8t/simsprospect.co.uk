@@ -32,7 +32,7 @@ export function Pricing() {
         <SectionHeading
           eyebrow="Pricing"
           title="Transparent pricing that scales with you"
-          intro="Two tiers, both month-to-month. Pick the one that matches the pipeline you need — switch up or down whenever."
+          intro="Two tiers, both month-to-month. Pick the one that matches the pipeline you need, and switch up or down whenever."
         />
 
         <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
@@ -113,7 +113,7 @@ export function Pricing() {
         </div>
 
         <p className="mx-auto mt-10 max-w-xl text-center text-sm text-slate-600">
-          Need something custom — higher volume, additional channels, or a
+          Need something custom, like higher volume, additional channels, or a
           white-label setup?{" "}
           <a
             href="#audit"
@@ -121,14 +121,6 @@ export function Pricing() {
           >
             Let&apos;s scope it on a call.
           </a>
-        </p>
-
-        <p className="mt-2 text-center text-xs text-slate-500">
-          Sample pricing — adjust to your real offer in{" "}
-          <code className="rounded bg-slate-200 px-1 py-0.5 text-[11px]">
-            app/lib/site.ts
-          </code>
-          .
         </p>
       </div>
     </section>
