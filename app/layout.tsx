@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { site } from "@/app/lib/site";
 import { Header } from "@/app/components/Header";
@@ -8,6 +8,14 @@ import { CookieBanner } from "@/app/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+/* Display face for headings — editorial grotesque that gives the brand a
+   distinct voice instead of the default Next.js Geist-everywhere look. */
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
 });
@@ -49,7 +57,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${bricolage.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col bg-white text-slate-900">
         {/* Accessibility: lets keyboard users jump straight to content */}
         <a

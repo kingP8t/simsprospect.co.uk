@@ -2,15 +2,30 @@
 
 /* ─────────────────────────────────────────────────────────────
    Brand tokens — SIMS PROSPECTS
-   Orange = energy + momentum, used only for CTAs and emphasis.
-   Deep slate (Tailwind's built-in slate-900/950) carries structure.
+   Accent is a warm clay/vermilion (momentum, but off the default
+   Tailwind orange-600). It carries CTAs and emphasis only.
    ⚠️ CONFIRM exact hex values against brand guidelines.
    ───────────────────────────────────────────────────────────── */
 @theme {
-  --color-brand: #ea580c;        /* primary / CTA            */
-  --color-brand-dark: #c2410c;   /* CTA hover / pressed      */
-  --color-brand-light: #fb923c;  /* accents on dark surfaces */
-  --color-brand-tint: #fff7ed;   /* soft orange backgrounds  */
+  --color-brand: #c8451d;        /* primary / CTA            */
+  --color-brand-dark: #9e3514;   /* CTA hover / pressed      */
+  --color-brand-light: #f0875a;  /* accents on dark surfaces */
+  --color-brand-tint: #fbeee6;   /* soft warm backgrounds    */
+
+  /* Warm ink neutral ramp — overrides Tailwind's cool blue-slate
+     site-wide, so every existing `slate-*` utility reads as warm
+     graphite on paper. No markup changes needed. */
+  --color-slate-50:  #faf8f5;
+  --color-slate-100: #f3f0ea;
+  --color-slate-200: #e7e1d8;
+  --color-slate-300: #d5cdc1;
+  --color-slate-400: #a69d92;
+  --color-slate-500: #79716a;
+  --color-slate-600: #5b544d;
+  --color-slate-700: #423d37;
+  --color-slate-800: #2a2622;
+  --color-slate-900: #1b1813;
+  --color-slate-950: #12100b;
 
   --font-sans: var(--font-geist-sans);
 }
@@ -21,6 +36,13 @@ html {
 
 body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Headings use the display face for a distinct editorial voice. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
 }
 
 /* Respect users who prefer reduced motion */

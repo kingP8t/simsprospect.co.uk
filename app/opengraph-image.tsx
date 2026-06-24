@@ -19,7 +19,7 @@ export default function OpengraphImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#1b1b1b",
+          backgroundColor: "#1b1813",
           padding: "80px",
         }}
       >
@@ -29,14 +29,14 @@ export default function OpengraphImage() {
             height="120"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#ef9a3e"
+            stroke="#f0875a"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
             <path d="M8.5 9a5 5 0 1 0 5 5" />
             <path d="M8.5 11.7a2.3 2.3 0 1 0 2.3 2.3" />
-            <circle cx="8.5" cy="14" r="0.9" fill="#ef9a3e" stroke="none" />
+            <circle cx="8.5" cy="14" r="0.9" fill="#f0875a" stroke="none" />
             <path d="M8.5 14l4-3.5 2.5 1.5L20 6" />
             <path d="M15 6h5v5" />
           </svg>
@@ -49,7 +49,7 @@ export default function OpengraphImage() {
               letterSpacing: "-3px",
             }}
           >
-            <span style={{ color: "#ef9a3e" }}>SIMS</span>
+            <span style={{ color: "#f0875a" }}>SIMS</span>
             <span style={{ color: "#ffffff", marginLeft: "24px" }}>
               PROSPECTS
             </span>
@@ -63,10 +63,10 @@ export default function OpengraphImage() {
             textAlign: "center",
             fontSize: "36px",
             lineHeight: 1.3,
-            color: "#cbd5e1",
+            color: "#d5cdc1",
           }}
         >
-          A predictable pipeline of booked sales meetings — cold calling,
+          A predictable pipeline of booked sales meetings: cold calling,
           LinkedIn outreach and appointment setting.
         </div>
       </div>
