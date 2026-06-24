@@ -20,7 +20,7 @@ export const site = {
  */
 export const founder = {
   name: "King",
-  role: "Founder, SIMS PROSPECTS",
+  role: "CEO & Founder, SIMS PROSPECTS",
   /**
    * Square photo, ~600×600, kept under ~200 KB. Drop the file at
    * /public/team/king.jpg (it maps to "/team/king.jpg"). Until the file
@@ -45,12 +45,31 @@ export const team: {
   photoSrc: string;
   linkedinUrl?: string;
 }[] = [
-  // {
-  //   name: "Jane Doe",
-  //   role: "Head of Outreach",
-  //   photoSrc: "/team/jane-doe.jpg",
-  //   linkedinUrl: "https://www.linkedin.com/in/jane-doe/",
-  // },
+  {
+    name: "Ayuba Tomy",
+    role: "Creative Director",
+    photoSrc: "/team/ayuba-tomy.webp",
+  },
+  {
+    name: "S Vijaya",
+    role: "Copywriter & Marketing",
+    photoSrc: "/team/s-vijaya.webp",
+  },
+  {
+    name: "V Amalash",
+    role: "Performance Marketing Manager",
+    photoSrc: "/team/v-amalash.webp",
+  },
+  {
+    name: "Upasana Jain",
+    role: "Email Marketing Specialist",
+    photoSrc: "/team/upasana-jain.webp",
+  },
+  {
+    name: "Nana Namrata",
+    role: "Social Media Manager",
+    photoSrc: "/team/nana-namrata.webp",
+  },
 ];
 
 /**
