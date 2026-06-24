@@ -288,7 +288,7 @@ export const caseStudies: CaseStudy[] = [
     summary: {
       body: "LoyaltyPlant had a strong product but an inconsistent outbound engine. Over a 12-week cold email and LinkedIn program into multi-location restaurant operators, we reached 14,600+ prospects and built a $1.2M+ qualified pipeline.",
       primaryMetric: { value: "$1.2M+", label: "pipeline built in 12 weeks" },
-      secondaryMetric: { value: "40", label: "sales-qualified demos booked" },
+      secondaryMetric: { value: "20", label: "new deals closed" },
     },
     about:
       "LoyaltyPlant is a digital engagement platform for multi-location restaurant brands — QSRs, fast-casual concepts, coffee chains, and franchise groups. Its mobile app combines high-quality ordering, creative loyalty programmes, and marketing tools that help brands lift visit frequency, grow average check, and drive more direct orders. Strong product, but outbound that was inconsistent and hard to forecast.",
