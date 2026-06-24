@@ -1,13 +1,14 @@
+import { Avatar } from "@/app/components/Avatar";
 import { FounderAvatar } from "@/app/components/FounderAvatar";
-import { founder } from "@/app/lib/site";
+import { founder, team } from "@/app/lib/site";
 
 /**
  * Founder humanises the agency right before pricing — the "UK team you
- * can actually talk to" beat from the Harper reference.
+ * can actually talk to" beat.
  *
- * ⚠️ Drop a real photo at /public/founder.jpg (square, ~600×600) and the
- * styled initial placeholder is replaced automatically. Update the bio
- * in lib/site.ts.
+ * Photos: drop square images in /public/team/ and point `founder.photoSrc`
+ * (and any `team[]` entries) at them in lib/site.ts. Until a file exists, a
+ * clean initials tile shows in its place. Update bios in lib/site.ts too.
  */
 export function Team() {
   return (
@@ -54,6 +55,36 @@ export function Team() {
             </div>
           </div>
         </div>
+
+        {team.length > 0 && (
+          <div className="mt-14 border-t border-slate-200 pt-12">
+            <p className="text-center text-sm font-semibold uppercase tracking-wide text-brand">
+              The team behind your pipeline
+            </p>
+            <ul className="mx-auto mt-8 flex max-w-3xl flex-wrap items-start justify-center gap-x-10 gap-y-8">
+              {team.map((member) => (
+                <li
+                  key={member.name}
+                  className="flex w-32 flex-col items-center text-center"
+                >
+                  <Avatar
+                    name={member.name}
+                    photoSrc={member.photoSrc}
+                    role={member.role}
+                    className="h-24 w-24 ring-1 ring-slate-200"
+                    initialsClassName="text-2xl"
+                  />
+                  <span className="mt-3 text-sm font-semibold text-slate-900">
+                    {member.name}
+                  </span>
+                  <span className="mt-0.5 text-xs leading-snug text-slate-500">
+                    {member.role}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   );

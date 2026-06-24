@@ -21,11 +21,37 @@ export const site = {
 export const founder = {
   name: "King",
   role: "Founder, SIMS PROSPECTS",
-  /** Drop a square photo at /public/founder.jpg or update the path. */
-  photoSrc: "/videos/founder-intro.jpg",
+  /**
+   * Square photo, ~600×600, kept under ~200 KB. Drop the file at
+   * /public/team/king.jpg (it maps to "/team/king.jpg"). Until the file
+   * exists, a clean initials tile shows in its place — no broken image.
+   */
+  photoSrc: "/team/king.jpg",
   bio: "King founded SIMS PROSPECTS to give B2B teams a predictable pipeline without growing their headcount. He works hands-on with every client to design the campaign, sharpen the offer, and book the meetings that grow their revenue.",
   linkedinUrl: "https://www.linkedin.com/in/kingoladpeter/", // ⚠️ CONFIRM
 } as const;
+
+/**
+ * Additional team members shown as a row beneath the founder.
+ * Leave empty to show just the founder. To add someone:
+ *   1. Drop a square photo (~400×400, under ~150 KB) in /public/team/,
+ *      e.g. /public/team/jane-doe.jpg
+ *   2. Add an entry below pointing `photoSrc` at "/team/jane-doe.jpg".
+ * A clean initials tile shows for anyone without a photo yet.
+ */
+export const team: {
+  name: string;
+  role: string;
+  photoSrc: string;
+  linkedinUrl?: string;
+}[] = [
+  // {
+  //   name: "Jane Doe",
+  //   role: "Head of Outreach",
+  //   photoSrc: "/team/jane-doe.jpg",
+  //   linkedinUrl: "https://www.linkedin.com/in/jane-doe/",
+  // },
+];
 
 /**
  * Pricing tiers shown on the Pricing section.
