@@ -11,7 +11,7 @@ const steps = [
   {
     title: "Build & verify target lists",
     description:
-      "We source and verify contacts that match your profile — accurate data so your campaign reaches the right people.",
+      "We source and verify contacts that match your profile, so your campaign reaches the right people with accurate data.",
   },
   {
     title: "Run multi-channel outreach",
@@ -21,7 +21,7 @@ const steps = [
   {
     title: "Hand off booked meetings",
     description:
-      "Qualified, confirmed meetings land on your reps' calendars — with context, so they walk in ready to sell.",
+      "Qualified, confirmed meetings land on your reps' calendars with the context they need to walk in ready to sell.",
   },
 ];
 
@@ -32,7 +32,7 @@ export function Process() {
         <SectionHeading
           eyebrow="How it works"
           title="From kickoff to booked meetings"
-          intro="A clear, repeatable process — you keep control of the messaging and visibility into every step."
+          intro="A clear, repeatable process. You keep control of the messaging and full visibility into every step."
         />
 
         {/* Explainer video. Off until enabled in app/lib/video.ts. */}

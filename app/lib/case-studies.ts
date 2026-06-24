@@ -62,7 +62,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     solution: {
       intro:
-        "We became an extension of their team, owning the outbound motion from prospecting through to booked appointments — with weekly reporting back to leadership.",
+        "We ran their outbound motion end to end, from prospecting through to booked appointments, with weekly reporting back to leadership.",
       sections: [
         {
           title: "Done-for-you appointment setting",

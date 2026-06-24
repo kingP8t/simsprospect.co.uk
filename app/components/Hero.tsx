@@ -48,9 +48,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-              SIMS PROSPECTS runs cold calling, LinkedIn outreach, and
-              appointment setting for B2B teams — so your reps spend their time
-              closing deals, not chasing prospects.
+              We run the cold calling, LinkedIn outreach, and appointment
+              setting that keeps your sales team&apos;s calendar full of
+              qualified meetings. Your reps get to spend their day selling.
             </p>
 
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">

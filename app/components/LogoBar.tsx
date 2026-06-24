@@ -1,21 +1,18 @@
 /**
- * Social-proof strip — Harper-style framing.
+ * Social-proof strip.
  *
- * The headline ("Our clients have opened conversations at") positions
- * these as TARGET ACCOUNTS your clients reached through us, not
- * SIMS PROSPECTS' own clients. This is more honest and more impressive.
- *
- * ⚠️ CONFIRM — replace placeholder names with the real, recognisable
- * accounts your clients have actually booked meetings at, and switch
- * to real logos (use next/image) once you have them.
+ * ⚠️ Do NOT list named companies here unless your clients have genuinely
+ * booked meetings at them and you can substantiate it — naming blue-chip
+ * accounts you haven't reached breaches UK ASA/CAP rules. Until you have
+ * real, named accounts (with real logos via next/image), keep the honest
+ * sector framing below.
  */
-const placeholderAccounts = [
-  "Capgemini",
-  "Sage",
-  "Travis Perkins",
-  "BT Business",
-  "Hays",
-  "Bupa",
+const sectors = [
+  "B2B SaaS",
+  "Recruitment",
+  "Professional services",
+  "Agencies",
+  "E-commerce",
 ];
 
 export function LogoBar() {
@@ -23,10 +20,10 @@ export function LogoBar() {
     <section className="border-y border-slate-200 bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-medium uppercase tracking-wide text-slate-500">
-          Our clients have opened conversations at
+          We book meetings for B2B teams in
         </p>
         <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-          {placeholderAccounts.map((name) => (
+          {sectors.map((name) => (
             <li
               key={name}
               className="text-lg font-semibold tracking-tight text-slate-400"
@@ -36,9 +33,8 @@ export function LogoBar() {
           ))}
         </ul>
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-slate-500">
-          When you partner with us, your reps end up in rooms with the
-          decision-makers you&apos;ve been targeting — across SaaS,
-          recruitment, and professional services.
+          We get your reps in front of the decision-makers they&apos;ve been
+          trying to reach, in the sectors we know best.
         </p>
       </div>
     </section>

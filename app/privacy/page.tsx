@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/app/components/LegalLayout";
-import { site, legal } from "@/app/lib/site";
+import { site, legal, isPlaceholder } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -25,10 +25,17 @@ export default function PrivacyPage() {
       </p>
       <p>
         For the purposes of UK data protection law, the data controller is{" "}
-        {legal.companyName}, {legal.address}, registered in {legal.jurisdiction}{" "}
-        (company number {legal.companyNumber}). We are registered with the
-        Information Commissioner&apos;s Office (registration number{" "}
-        {legal.icoNumber}).
+        {legal.companyName}
+        {!isPlaceholder(legal.address) && <>, {legal.address}</>}, registered in{" "}
+        {legal.jurisdiction}
+        {!isPlaceholder(legal.companyNumber) && (
+          <> (company number {legal.companyNumber})</>
+        )}
+        . We are registered with the Information Commissioner&apos;s Office
+        {!isPlaceholder(legal.icoNumber) && (
+          <> (registration number {legal.icoNumber})</>
+        )}
+        .
       </p>
 
       <h2>1. The personal data we collect</h2>

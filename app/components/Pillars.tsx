@@ -27,7 +27,7 @@ const pillars: {
   {
     name: "Technology",
     title: "Verified data and multi-channel reach",
-    body: "Clean, ICP-matched data and the tooling to run calls, LinkedIn, and email together — without you buying or learning a stack.",
+    body: "Clean, ICP-matched data and the tooling to run calls, LinkedIn, and email together, without you having to buy or learn a stack.",
     points: [
       "Contact data verified before outreach",
       "Calls, LinkedIn & email run as one motion",
@@ -44,7 +44,7 @@ const pillars: {
   {
     name: "Process",
     title: "A repeatable system, reported weekly",
-    body: "A defined motion from ICP to booked meeting, tuned every few weeks on what's actually converting — so results compound.",
+    body: "A defined motion from ICP to booked meeting, tuned every few weeks on what's actually converting, so the results keep improving.",
     points: [
       "ICP workshop → list → outreach → qualify → book",
       "Messaging A/B-tested and refined",
@@ -68,11 +68,11 @@ export function Pillars() {
             Why it works
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            People, technology, and process — pulling together
+            People, technology, and process working together
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-300">
-            Pipeline isn&apos;t one trick. It&apos;s the right people running the
-            right system on clean data — which is exactly what we bring.
+            Pipeline isn&apos;t one trick. It takes the right people running the
+            right system on clean data, which is exactly what we bring.
           </p>
         </div>
 

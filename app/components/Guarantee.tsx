@@ -3,7 +3,7 @@
 const guarantees: { title: string; body: string }[] = [
   {
     title: "Month-to-month, no lock-in",
-    body: "Every engagement is rolling. Pause or cancel any month — for holiday cover, headcount changes, or any reason at all.",
+    body: "Every engagement is rolling. Pause or cancel any month, whether it's for holiday cover, headcount changes, or any reason at all.",
   },
   {
     title: "Qualified meetings, or we fix it",

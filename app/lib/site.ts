@@ -23,7 +23,7 @@ export const founder = {
   role: "Founder, SIMS PROSPECTS",
   /** Drop a square photo at /public/founder.jpg or update the path. */
   photoSrc: "/videos/founder-intro.jpg",
-  bio: "King founded SIMS PROSPECTS to give B2B teams a predictable pipeline without growing their headcount. He works hands-on with every client to design the campaign, sharpen the offer, and book the meetings that move your number.",
+  bio: "King founded SIMS PROSPECTS to give B2B teams a predictable pipeline without growing their headcount. He works hands-on with every client to design the campaign, sharpen the offer, and book the meetings that grow their revenue.",
   linkedinUrl: "https://www.linkedin.com/in/kingoladpeter/", // ⚠️ CONFIRM
 } as const;
 
@@ -76,6 +76,15 @@ export const legal = {
   icoNumber: "[ICO registration number]",
   jurisdiction: "England and Wales",
 } as const;
+
+/**
+ * True while a legal detail still holds its bracketed placeholder
+ * (e.g. "[ICO registration number]"). Legal pages use this to omit the
+ * clause entirely rather than render raw brackets to visitors.
+ */
+export function isPlaceholder(value: string): boolean {
+  return value.trim().startsWith("[");
+}
 
 /** Key used to store the visitor's cookie choice in localStorage. */
 export const COOKIE_CONSENT_KEY = "sims-cookie-consent";

@@ -56,7 +56,7 @@ export function Services() {
         <SectionHeading
           eyebrow="What we do"
           title="Outsource the prospecting, keep the closing"
-          intro="Five services that work on their own or together — built to fill your pipeline with meetings your reps actually want to take."
+          intro="Five services that work on their own or together, built to fill your pipeline with meetings your reps actually want to take."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

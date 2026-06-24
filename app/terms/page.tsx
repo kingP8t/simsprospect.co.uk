@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/app/components/LegalLayout";
-import { site, legal } from "@/app/lib/site";
+import { site, legal, isPlaceholder } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
@@ -24,8 +24,14 @@ export default function TermsPage() {
       <h2>1. About us</h2>
       <p>
         This website is operated by {legal.companyName}, a company registered in{" "}
-        {legal.jurisdiction} (company number {legal.companyNumber}), with its
-        registered office at {legal.address}.
+        {legal.jurisdiction}
+        {!isPlaceholder(legal.companyNumber) && (
+          <> (company number {legal.companyNumber})</>
+        )}
+        {!isPlaceholder(legal.address) && (
+          <>, with its registered office at {legal.address}</>
+        )}
+        .
       </p>
 
       <h2>2. Using our website</h2>

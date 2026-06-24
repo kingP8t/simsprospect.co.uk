@@ -154,7 +154,7 @@ export const services: Service[] = [
         },
         {
           title: "Continuous message testing",
-          body: "We test openers, angles, and CTAs every few weeks and keep what books meetings — so results compound over time.",
+          body: "We test openers, angles, and CTAs every few weeks and keep what books meetings, so performance improves month over month.",
         },
       ],
     },
@@ -488,7 +488,7 @@ export const services: Service[] = [
           body: "We're measured on qualified, attended meetings — not vanity volume. Your reps' time is the metric we protect.",
         },
         {
-          title: "An extension of your team",
+          title: "Part of your sales team",
           body: "We work as part of your sales motion, with warm handoffs and the context each meeting needs to convert.",
         },
         {
@@ -686,7 +686,7 @@ export const services: Service[] = [
     cardOutcome: "Deeper traction in the accounts worth winning.",
     metaTitle: "Account-Based Marketing (ABM) Services",
     metaDescription:
-      "Targeted ABM for B2B teams: we hand-pick your highest-value accounts, map the full buying committee, and run coordinated outreach across phone, email, and LinkedIn to book meetings inside the accounts that move your number.",
+      "Targeted ABM for B2B teams: we hand-pick your highest-value accounts, map the full buying committee, and run coordinated outreach across phone, email, and LinkedIn to book meetings inside the accounts that matter most to your growth.",
     hero: {
       eyebrow: "Account-based marketing",
       title: "Win the accounts that actually move your number",
@@ -698,7 +698,7 @@ export const services: Service[] = [
       ],
     },
     problem: {
-      title: "Your biggest accounts won't be won by spray-and-pray",
+      title: "Your biggest accounts won't be won by a generic blast",
       intro:
         "The deals that change your year are complex — four to ten people decide, and a generic blast never reaches them. Run as broad outbound, the accounts that matter most slip through:",
       points: [
@@ -787,7 +787,7 @@ export const services: Service[] = [
       points: [
         {
           title: "Concentration, not scatter",
-          body: "Effort is focused on the handful of accounts that would genuinely move your number — so each one gets the attention it deserves.",
+          body: "Effort is focused on the handful of accounts that would genuinely change your year, so each one gets the attention it deserves.",
         },
         {
           title: "Multi-threaded by design",
@@ -795,7 +795,7 @@ export const services: Service[] = [
         },
         {
           title: "Run as one team",
-          body: "We work as an extension of your sales effort, with one coordinated story across every channel and warm handoffs when meetings land.",
+          body: "We plug into your sales effort, with one coordinated story across every channel and warm handoffs when meetings land.",
         },
       ],
     },

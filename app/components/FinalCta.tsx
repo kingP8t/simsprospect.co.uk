@@ -7,7 +7,7 @@ export function FinalCta() {
   const benefits = [
     "30-minute call, no obligation",
     "We'll review your current pipeline and where the gaps are",
-    "Walk away with a clear plan — even if we don't work together",
+    "Walk away with a clear plan, even if we don't work together",
   ];
 
   return (
@@ -23,9 +23,9 @@ export function FinalCta() {
           Book your free strategy call with {founder.name}
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-slate-300">
-          A focused 30-minute conversation. We&apos;ll look at your current
-          pipeline, where the gaps are, and exactly how we&apos;d book more
-          qualified meetings for your team — free, no obligation.
+          A focused 30-minute conversation, free and with no obligation.
+          We&apos;ll look at your current pipeline, where the gaps are, and
+          exactly how we&apos;d book more qualified meetings for your team.
         </p>
 
         <ul className="mx-auto mt-8 grid max-w-xl gap-3 text-left">

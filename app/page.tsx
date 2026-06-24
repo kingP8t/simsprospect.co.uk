@@ -60,7 +60,7 @@ export default function HomePage() {
       {/* Capture visitors who just recognised what they need */}
       <MidCtaSection
         title="Sound like what your team needs?"
-        body="If outsourcing prospecting could change your numbers, a 30-minute call will tell you whether it's worth doing — free, no obligation."
+        body="If outsourcing prospecting could change your numbers, a free 30-minute call will tell you whether it's worth doing. No obligation."
         ctaLabel="Book a discovery call"
       />
 

@@ -2,14 +2,15 @@ import { Cta } from "@/app/components/Cta";
 
 /**
  * Results / proof section on a deep-slate background.
- * ⚠️ CONFIRM — replace the placeholder stats below with real, verifiable
- * client numbers before publishing. Specific, true numbers convert; vague
- * or invented ones erode trust.
+ * Every figure below must tie back to real, verifiable client work.
+ * ⚠️ CONFIRM the totals stay accurate as you add or close case studies:
+ * "338" is the sum of qualified meetings across the three case studies
+ * (186 + 137 + 15). Update it when the case-study data changes.
  */
 const stats = [
-  { value: "3×", label: "more qualified meetings vs. in-house prospecting" },
-  { value: "14 days", label: "average time to the first booked meeting" },
-  { value: "90%+", label: "of booked meetings kept by attending prospects" },
+  { value: "338", label: "qualified meetings booked across client campaigns" },
+  { value: "2–3 wks", label: "to the first booked meetings on a new campaign" },
+  { value: "100%", label: "of agreed KPIs met on our most recent engagement" },
 ];
 
 export function Results() {
@@ -41,11 +42,6 @@ export function Results() {
             </div>
           ))}
         </dl>
-
-        <p className="mt-6 text-center text-xs text-slate-500">
-          Illustrative figures — final copy to be confirmed with verified client
-          results.
-        </p>
 
         <div className="mt-10 text-center">
           <Cta size="lg">See what we can book for you</Cta>
