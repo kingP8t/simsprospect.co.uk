@@ -12,6 +12,13 @@ export type CaseStudy = {
   industry: string;
   /** Human-readable month + year, e.g. "January 2025". */
   date: string;
+  /**
+   * When true, this is an illustrative / representative scenario — NOT a
+   * delivered result for a named client. It renders with a clear
+   * "Illustrative scenario" label and is kept off the homepage
+   * "real outcomes" grid so genuine client proof stays distinct.
+   */
+  illustrative?: boolean;
   headline: string;
   /**
    * Optional hero image. Drop a file at `/public{src}` (e.g.
@@ -32,7 +39,8 @@ export type CaseStudy = {
     sections: { title: string; body: string; bullets: string[] }[];
   };
   results: { value: string; label: string; sublabel: string }[];
-  testimonial: { quote: string; author: string; role?: string };
+  /** Optional — omit for illustrative scenarios rather than inventing a quote. */
+  testimonial?: { quote: string; author: string; role?: string };
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -268,6 +276,81 @@ export const caseStudies: CaseStudy[] = [
       author: "Fatima Ahmed",
       role: "Product Lead Manager, Fast Digital Marketing",
     },
+  },
+
+  {
+    slug: "restaurant-loyalty-saas",
+    client: "Restaurant-loyalty SaaS platform",
+    industry: "Restaurant technology (SaaS)",
+    date: "Illustrative scenario",
+    illustrative: true,
+    headline:
+      "How integrated outbound builds a qualified pipeline for a multi-location restaurant-loyalty platform.",
+    summary: {
+      body: "An illustrative look at how we'd run outbound for a loyalty platform selling into multi-location restaurant brands — cold email and LinkedIn working together to turn operator pain points into booked demos. The figures below show the kind of result this approach is built to produce, not a delivered result for a named client.",
+      primaryMetric: { value: "80+", label: "marketing-qualified leads (illustrative)" },
+      secondaryMetric: { value: "40", label: "sales-qualified demos (illustrative)" },
+    },
+    about:
+      "The profile: a digital engagement platform built for multi-location restaurant brands — QSRs, fast-casual concepts, coffee chains, and franchise groups. Platforms like this help brands lift visit frequency, grow average check, and build loyalty through mobile apps, loyalty programmes, and data-driven campaigns. Strong product, but outbound that's inconsistent and hard to forecast.",
+    challenges: [
+      {
+        title: "An unpredictable outbound engine",
+        body: "A capable product let down by irregular lead flow and no repeatable way to put the sales team in front of multi-location operators. Pipeline came in fits and starts, with no rhythm to forecast against.",
+      },
+      {
+        title: "Cutting through a crowded market",
+        body: "Restaurant tech is noisy, and it was unclear which messages actually resonated with operators at different buying stages. The sales team needed a steady flow of high-intent demos to chase deals worth 100+ locations.",
+      },
+    ],
+    solution: {
+      intro:
+        "The play: a multi-channel outbound program built on two coordinated channels, cold email and LinkedIn, with messaging written around the realities multi-location operators and franchise leaders actually face.",
+      sections: [
+        {
+          title: "Email that turns pain points into pipeline",
+          body: "Tightly segmented lists and sequences built around specific operator pain, not generic feature dumps — shrinking margins, aggregator and delivery-platform fees, and the need to drive more direct orders.",
+          bullets: [
+            "Segmented QSR and fast-casual operators with 20–150 locations across the US, UK, and MENA",
+            "Sequences built around margin pressure and aggregator-fee pain, positioning the platform as the fix",
+            "Continuous A/B testing on subject lines, copy, and CTAs to lift reply and meeting rates",
+            "Deliverability, domain health, and warm-up managed across multiple sending domains",
+          ],
+        },
+        {
+          title: "LinkedIn that builds trust before the call",
+          body: "A parallel LinkedIn motion into Franchise Directors, CMOs, and brand owners — value-first, not pitch-slaps — so prospects arrived at the call already warm and familiar with the offer.",
+          bullets: [
+            "Tailored connection requests referencing each brand's growth, footprint, or visible challenges",
+            "Short, value-first follow-ups using insights, benchmarks, and relevant proof points",
+            "Interest nurtured before any invite to a discovery call, never a cold pitch",
+            "Messaging reinforced across email and LinkedIn so prospects saw consistent value on both channels",
+          ],
+        },
+      ],
+    },
+    results: [
+      {
+        value: "80+",
+        label: "Marketing-qualified leads",
+        sublabel: "Illustrative — from tightly defined ICP accounts",
+      },
+      {
+        value: "40",
+        label: "Sales-qualified demos",
+        sublabel: "Illustrative — booked straight to the sales team",
+      },
+      {
+        value: "$1.2M+",
+        label: "Pipeline created",
+        sublabel: "Illustrative potential revenue from multi-location brands",
+      },
+      {
+        value: "Repeatable",
+        label: "Outbound system",
+        sublabel: "A framework to scale and refine, not one-off campaigns",
+      },
+    ],
   },
 ];
 

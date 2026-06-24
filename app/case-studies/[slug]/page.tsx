@@ -92,6 +92,15 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                 <span className="text-slate-500">{study.date}</span>
               </div>
 
+              {study.illustrative && (
+                <p className="mt-5 rounded-xl bg-brand-tint px-4 py-3 text-sm font-medium leading-relaxed text-brand-dark ring-1 ring-inset ring-brand/20">
+                  <strong>Illustrative scenario.</strong> A representative
+                  example of how this approach works for the vertical — not a
+                  delivered result for a named client. The figures shown are
+                  illustrative.
+                </p>
+              )}
+
               <h1 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
                 {study.headline}
               </h1>
@@ -256,7 +265,9 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             The results
           </p>
           <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            What we delivered
+            {study.illustrative
+              ? "What this approach is built to deliver"
+              : "What we delivered"}
           </h2>
 
           <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
@@ -293,7 +304,8 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Testimonial */}
+      {/* Testimonial — omitted for illustrative scenarios (no invented quotes) */}
+      {study.testimonial && (
       <section className="bg-white pb-16 sm:pb-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <figure>
@@ -322,6 +334,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
           </figure>
         </div>
       </section>
+      )}
 
       {/* Final CTA */}
       <section className="bg-slate-50 py-16 sm:py-20">

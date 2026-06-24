@@ -9,7 +9,10 @@ import { caseStudies, type CaseStudy } from "@/app/lib/case-studies";
  * dark-panel treatment, not just the first.
  */
 export function CaseStudies() {
-  if (caseStudies.length === 0) return null;
+  // Only genuine, delivered client results belong in this "real outcomes"
+  // grid. Illustrative scenarios have their own labelled detail pages.
+  const featured = caseStudies.filter((study) => !study.illustrative);
+  if (featured.length === 0) return null;
 
   return (
     <section id="cases" className="scroll-mt-20 bg-slate-50 py-20 sm:py-24">
@@ -21,7 +24,7 @@ export function CaseStudies() {
         />
 
         <div className="mx-auto mt-14 max-w-5xl space-y-8">
-          {caseStudies.map((study) => (
+          {featured.map((study) => (
             <FeaturedCard key={study.slug} study={study} />
           ))}
         </div>
