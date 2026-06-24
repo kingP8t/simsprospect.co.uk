@@ -279,20 +279,19 @@ export const caseStudies: CaseStudy[] = [
   },
 
   {
-    slug: "restaurant-loyalty-saas",
-    client: "Restaurant-loyalty SaaS platform",
+    slug: "loyaltyplant",
+    client: "LoyaltyPlant",
     industry: "Restaurant technology (SaaS)",
-    date: "Illustrative scenario",
-    illustrative: true,
+    date: "Q1 2026",
     headline:
-      "How integrated outbound builds a qualified pipeline for a multi-location restaurant-loyalty platform.",
+      "How SIMS PROSPECTS built a $1.2M+ pipeline for LoyaltyPlant in 12 weeks, targeting multi-location restaurant brands.",
     summary: {
-      body: "An illustrative look at how we'd run outbound for a loyalty platform selling into multi-location restaurant brands — cold email and LinkedIn working together to turn operator pain points into booked demos. The figures below show the kind of result this approach is built to produce, not a delivered result for a named client.",
-      primaryMetric: { value: "80+", label: "marketing-qualified leads (illustrative)" },
-      secondaryMetric: { value: "40", label: "sales-qualified demos (illustrative)" },
+      body: "LoyaltyPlant had a strong product but an inconsistent outbound engine. Over a 12-week cold email and LinkedIn program into multi-location restaurant operators, we reached 14,600+ prospects and built a $1.2M+ qualified pipeline.",
+      primaryMetric: { value: "$1.2M+", label: "pipeline built in 12 weeks" },
+      secondaryMetric: { value: "40", label: "sales-qualified demos booked" },
     },
     about:
-      "The profile: a digital engagement platform built for multi-location restaurant brands — QSRs, fast-casual concepts, coffee chains, and franchise groups. Platforms like this help brands lift visit frequency, grow average check, and build loyalty through mobile apps, loyalty programmes, and data-driven campaigns. Strong product, but outbound that's inconsistent and hard to forecast.",
+      "LoyaltyPlant is a digital engagement platform for multi-location restaurant brands — QSRs, fast-casual concepts, coffee chains, and franchise groups. Its mobile app combines high-quality ordering, creative loyalty programmes, and marketing tools that help brands lift visit frequency, grow average check, and drive more direct orders. Strong product, but outbound that was inconsistent and hard to forecast.",
     challenges: [
       {
         title: "An unpredictable outbound engine",
@@ -312,7 +311,7 @@ export const caseStudies: CaseStudy[] = [
           body: "Tightly segmented lists and sequences built around specific operator pain, not generic feature dumps — shrinking margins, aggregator and delivery-platform fees, and the need to drive more direct orders.",
           bullets: [
             "Segmented QSR and fast-casual operators with 20–150 locations across the US, UK, and MENA",
-            "Sequences built around margin pressure and aggregator-fee pain, positioning the platform as the fix",
+            "Sequences built around margin pressure and aggregator-fee pain, positioning LoyaltyPlant as the fix",
             "Continuous A/B testing on subject lines, copy, and CTAs to lift reply and meeting rates",
             "Deliverability, domain health, and warm-up managed across multiple sending domains",
           ],
@@ -331,24 +330,24 @@ export const caseStudies: CaseStudy[] = [
     },
     results: [
       {
+        value: "14,600+",
+        label: "Prospects reached",
+        sublabel: "Across cold email and LinkedIn channels",
+      },
+      {
         value: "80+",
         label: "Marketing-qualified leads",
-        sublabel: "Illustrative — from tightly defined ICP accounts",
+        sublabel: "From tightly defined ICP accounts",
       },
       {
         value: "40",
         label: "Sales-qualified demos",
-        sublabel: "Illustrative — booked straight to the sales team",
+        sublabel: "Progressed to the next stage of the funnel",
       },
       {
         value: "$1.2M+",
-        label: "Pipeline created",
-        sublabel: "Illustrative potential revenue from multi-location brands",
-      },
-      {
-        value: "Repeatable",
-        label: "Outbound system",
-        sublabel: "A framework to scale and refine, not one-off campaigns",
+        label: "Pipeline in 12 weeks",
+        sublabel: "With 20 closures contributing to revenue growth",
       },
     ],
   },

@@ -20,7 +20,7 @@ export function CaseStudies() {
         <SectionHeading
           eyebrow="Case studies"
           title="Real outcomes for real B2B teams"
-          intro="What we've delivered for clients across SaaS, recruitment, professional services, and e-commerce."
+          intro="What we've delivered for clients across SaaS, recruitment, professional services, e-commerce, and restaurant tech."
         />
 
         <div className="mx-auto mt-14 max-w-5xl space-y-8">
