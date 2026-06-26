@@ -68,7 +68,7 @@ export function Team() {
             </ul>
 
             <div className="mt-7 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-              <Cta>Book a 30-min call with {founder.name}</Cta>
+              <Cta>Book a 30-min call with our pipeline expert</Cta>
               <a
                 href={site.linkedinUrl}
                 target="_blank"
