@@ -29,7 +29,7 @@ export const founder = {
    * exists, a clean initials tile shows in its place — no broken image.
    */
   photoSrc: "/team/king.jpg",
-  bio: "King founded SIMS PROSPECTS to give B2B teams a predictable pipeline without growing their headcount. He works hands-on with every client to design the campaign, sharpen the offer, and book the meetings that grow their revenue.",
+  bio: "You get a predictable pipeline without adding headcount. King is hands-on with every account, designing the campaign, sharpening your offer, and booking the meetings that grow your revenue.",
   linkedinUrl: "https://www.linkedin.com/in/kingoladpeter/", // ⚠️ CONFIRM
 } as const;
 
