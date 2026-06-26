@@ -350,6 +350,12 @@ export const caseStudies: CaseStudy[] = [
         sublabel: "With 20 closures contributing to revenue growth",
       },
     ],
+    testimonial: {
+      quote:
+        "SIMS PROSPECTS learned our market fast and ran outbound we could actually forecast around. Inside twelve weeks we had 40 qualified demos, a $1.2M pipeline, and 20 new deals closed. They operate like an extension of our sales team, not a vendor.",
+      author: "Jose Morata",
+      role: "VP Sales, LoyaltyPlant",
+    },
   },
 ];
 
