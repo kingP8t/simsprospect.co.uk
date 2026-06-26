@@ -12,6 +12,8 @@ export const site = {
   salesEmail: "king@simsprospects.co.uk", // sales enquiries — ⚠️ CONFIRM mailbox exists
   // Cal.com discovery-call link
   bookingUrl: "https://cal.com/simsprospect/30min",
+  // Company LinkedIn page
+  linkedinUrl: "https://www.linkedin.com/company/sims-prospects",
 } as const;
 
 /**

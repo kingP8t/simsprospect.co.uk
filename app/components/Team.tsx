@@ -1,6 +1,14 @@
 import { Avatar } from "@/app/components/Avatar";
+import { Cta } from "@/app/components/Cta";
 import { FounderAvatar } from "@/app/components/FounderAvatar";
-import { founder, team } from "@/app/lib/site";
+import { founder, team, site } from "@/app/lib/site";
+
+/** Short, truthful trust signals shown under the founder bio. */
+const founderProof = [
+  "Hands-on with every campaign",
+  "UK-based team",
+  "Replies within one working day",
+];
 
 /**
  * Founder humanises the agency right before pricing — the "UK team you
@@ -34,12 +42,38 @@ export function Team() {
               {founder.bio}
             </p>
 
-            <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
+            <ul className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 md:justify-start">
+              {founderProof.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-1.5 text-sm text-slate-600"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                    className="shrink-0 text-brand"
+                  >
+                    <path d="m5 13 4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-7 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
+              <Cta>Book a 30-min call with {founder.name}</Cta>
               <a
-                href={founder.linkedinUrl}
+                href={site.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-brand"
               >
                 <svg
                   width="18"
@@ -50,7 +84,7 @@ export function Team() {
                 >
                   <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57z" />
                 </svg>
-                Connect on LinkedIn
+                Follow on LinkedIn
               </a>
             </div>
           </div>
