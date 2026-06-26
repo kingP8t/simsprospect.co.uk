@@ -30,7 +30,6 @@ export const founder = {
    */
   photoSrc: "/team/king.jpg",
   bio: "You get a predictable pipeline without adding headcount. King is hands-on with every account, designing the campaign, sharpening your offer, and booking the meetings that grow your revenue.",
-  linkedinUrl: "https://www.linkedin.com/in/kingoladpeter/", // ⚠️ CONFIRM
 } as const;
 
 /**
