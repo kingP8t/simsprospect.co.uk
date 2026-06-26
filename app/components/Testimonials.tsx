@@ -26,6 +26,12 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quote:
+      "SIMS PROSPECTS learned our market fast and ran outbound we could actually forecast around. Inside twelve weeks we had 40 qualified demos, a $1.2M pipeline, and 20 new deals closed. They operate like an extension of our sales team, not a vendor.",
+    name: "Jose Morata",
+    role: "VP Sales, LoyaltyPlant",
+  },
+  {
+    quote:
       "They became an extension of our team. 186 qualified appointments delivered. The ROI was undeniable — and we didn't have to hire a single salesperson.",
     name: "Mikhail Antonchanka",
     role: "Home Lead Gen",
@@ -53,7 +59,7 @@ export function Testimonials() {
           title="What clients say"
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {testimonials.map((item) => (
             <figure
               key={item.role}
