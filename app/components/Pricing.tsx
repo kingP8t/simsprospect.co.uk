@@ -31,11 +31,11 @@ export function Pricing() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Pricing"
-          title="Transparent pricing that scales with you"
-          intro="Two tiers, both month-to-month. Pick the one that matches the pipeline you need, and switch up or down whenever."
+          title="Pricing for every outbound channel"
+          intro="Three channels, all month-to-month. Pick the one that fits how you want to reach buyers, or combine them, and scale up or down whenever."
         />
 
-        <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {pricing.map((tier) => (
             <article
               key={tier.name}
@@ -82,6 +82,14 @@ export function Pricing() {
                   {tier.cadence}
                 </span>
               </div>
+
+              <p
+                className={`mt-4 text-xs font-bold uppercase tracking-wide ${
+                  tier.highlighted ? "text-brand" : "text-brand-dark"
+                }`}
+              >
+                {tier.volume}
+              </p>
 
               <ul
                 className={`mt-8 space-y-3 ${
