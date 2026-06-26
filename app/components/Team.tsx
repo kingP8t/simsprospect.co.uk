@@ -87,6 +87,10 @@ export function Team() {
                 Follow on LinkedIn
               </a>
             </div>
+
+            <p className="mt-3 text-center text-xs text-slate-500 md:text-left">
+              Free 30-minute call. No pitch, no obligation.
+            </p>
           </div>
         </div>
 
