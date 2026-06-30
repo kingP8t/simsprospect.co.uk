@@ -57,7 +57,7 @@ const faqs: {
   {
     question: "What does it cost?",
     answer:
-      "Outbound starts at £2,500/month; Full Pipeline at £3,500/month, both month-to-month. See the pricing section above for what's included, or book a call and we'll scope something custom.",
+      "Pricing is per channel and month-to-month: LinkedIn Outreach from $397/month, Cold Email Outreach from $1,995/month, and Cold Call Outreach from $3,500/month. See the pricing section above for what's included, or book a call and we'll scope something custom.",
     links: [{ text: "pricing section", href: "#pricing" }],
   },
 ];
