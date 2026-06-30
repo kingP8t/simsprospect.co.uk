@@ -5,6 +5,7 @@ import { site } from "@/app/lib/site";
 import { Header } from "@/app/components/Header";
 import { Footer } from "@/app/components/Footer";
 import { CookieBanner } from "@/app/components/CookieBanner";
+import { MobileCtaBar } from "@/app/components/MobileCtaBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,6 +76,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieBanner />
+        <MobileCtaBar />
       </body>
     </html>
   );

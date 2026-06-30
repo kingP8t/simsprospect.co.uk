@@ -1,4 +1,6 @@
 import { Cta } from "@/app/components/Cta";
+import { Reveal } from "@/app/components/Reveal";
+import { CountUp } from "@/app/components/CountUp";
 
 /**
  * Results / proof section on a deep-slate background.
@@ -15,9 +17,18 @@ const stats = [
 
 export function Results() {
   return (
-    <section id="results" className="scroll-mt-20 bg-slate-900 py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+    <section
+      id="results"
+      className="relative scroll-mt-20 overflow-hidden bg-slate-900 py-20 sm:py-24"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-brand/20 blur-3xl"
+      />
+      <div aria-hidden="true" className="grain-overlay opacity-[0.06]" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-light">
             The numbers
           </p>
@@ -28,13 +39,13 @@ export function Results() {
             We measure success in booked, qualified meetings, and report on it
             every week.
           </p>
-        </div>
+        </Reveal>
 
-        <dl className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-3">
+        <dl className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/10 sm:grid-cols-3">
           {stats.map((stat) => (
             <div key={stat.label} className="bg-slate-900 px-6 py-10 text-center">
               <dt className="text-4xl font-bold tracking-tight text-brand-light sm:text-5xl">
-                {stat.value}
+                <CountUp value={stat.value} />
               </dt>
               <dd className="mt-3 text-sm leading-relaxed text-slate-300">
                 {stat.label}

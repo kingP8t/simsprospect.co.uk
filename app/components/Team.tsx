@@ -1,6 +1,7 @@
 import { Avatar } from "@/app/components/Avatar";
 import { Cta } from "@/app/components/Cta";
 import { FounderAvatar } from "@/app/components/FounderAvatar";
+import { Reveal } from "@/app/components/Reveal";
 import { founder, team, site } from "@/app/lib/site";
 
 /** Short, truthful trust signals shown under the founder bio. */
@@ -22,7 +23,7 @@ export function Team() {
   return (
     <section id="team" className="scroll-mt-20 bg-slate-50 py-20 sm:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[auto_1fr] md:gap-14">
+        <Reveal className="grid grid-cols-1 items-center gap-10 md:grid-cols-[auto_1fr] md:gap-14">
           <FounderAvatar
             className="mx-auto h-48 w-48 ring-1 ring-slate-200 md:mx-0 md:h-56 md:w-56"
             initialsClassName="text-5xl"
@@ -92,10 +93,10 @@ export function Team() {
               Free 30-minute call. No pitch, no obligation.
             </p>
           </div>
-        </div>
+        </Reveal>
 
         {team.length > 0 && (
-          <div className="mt-14 border-t border-slate-200 pt-12">
+          <Reveal className="mt-14 border-t border-slate-200 pt-12">
             <p className="text-center text-sm font-semibold uppercase tracking-wide text-brand">
               The team behind your pipeline
             </p>
@@ -121,7 +122,7 @@ export function Team() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         )}
       </div>
     </section>

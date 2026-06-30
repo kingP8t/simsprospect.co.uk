@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/app/components/SectionHeading";
 import { VideoPlayer } from "@/app/components/VideoPlayer";
+import { Reveal } from "@/app/components/Reveal";
 
 type Testimonial = {
   quote: string;
@@ -59,11 +60,11 @@ export function Testimonials() {
           title="What clients say"
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {testimonials.map((item) => (
+        <div className="mt-12 grid grid-cols-1 items-stretch gap-6 md:grid-cols-2">
+          {testimonials.map((item, i) => (
+            <Reveal key={item.role} className="h-full" delay={i * 80}>
             <figure
-              key={item.role}
-              className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-8"
+              className="flex h-full flex-col rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm ring-1 ring-slate-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               {item.video && (
                 <VideoPlayer
@@ -88,6 +89,7 @@ export function Testimonials() {
                 </span>
               </figcaption>
             </figure>
+            </Reveal>
           ))}
         </div>
       </div>

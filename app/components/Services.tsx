@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SectionHeading } from "@/app/components/SectionHeading";
+import { Reveal } from "@/app/components/Reveal";
 import { services } from "@/app/lib/services";
 
 /* Minimal inline icons keep the page dependency-free and fast.
@@ -59,12 +60,12 @@ export function Services() {
           intro="Five services that work on their own or together, built to fill your pipeline with meetings your reps actually want to take."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+        <div className="mt-14 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, i) => (
+            <Reveal key={service.slug} className="h-full" delay={i * 80}>
             <Link
-              key={service.slug}
               href={`/services/${service.slug}`}
-              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-shadow hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+              className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
               <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-tint text-brand">
                 {icons[service.slug]}
@@ -96,6 +97,7 @@ export function Services() {
                 </svg>
               </span>
             </Link>
+            </Reveal>
           ))}
         </div>
       </div>

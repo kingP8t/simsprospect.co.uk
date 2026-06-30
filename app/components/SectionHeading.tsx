@@ -1,3 +1,5 @@
+import { Reveal } from "@/app/components/Reveal";
+
 /** Shared section heading: small orange eyebrow, headline, optional intro. */
 export function SectionHeading({
   eyebrow,
@@ -14,7 +16,7 @@ export function SectionHeading({
     align === "center" ? "mx-auto text-center" : "text-left";
 
   return (
-    <div className={`max-w-2xl ${alignment}`}>
+    <Reveal className={`max-w-2xl ${alignment}`}>
       <p className="text-sm font-semibold uppercase tracking-wide text-brand">
         {eyebrow}
       </p>
@@ -24,6 +26,6 @@ export function SectionHeading({
       {intro && (
         <p className="mt-4 text-lg leading-relaxed text-slate-600">{intro}</p>
       )}
-    </div>
+    </Reveal>
   );
 }

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { SectionHeading } from "@/app/components/SectionHeading";
+import { Reveal } from "@/app/components/Reveal";
+import { CountUp } from "@/app/components/CountUp";
 import { caseStudies, type CaseStudy } from "@/app/lib/case-studies";
 
 /**
@@ -24,8 +26,10 @@ export function CaseStudies() {
         />
 
         <div className="mx-auto mt-14 max-w-5xl space-y-8">
-          {featured.map((study) => (
-            <FeaturedCard key={study.slug} study={study} />
+          {featured.map((study, i) => (
+            <Reveal key={study.slug} delay={i * 90}>
+              <FeaturedCard study={study} />
+            </Reveal>
           ))}
         </div>
 
@@ -46,7 +50,7 @@ export function CaseStudies() {
 /** A single case study rendered as a featured card with dark stats panel. */
 function FeaturedCard({ study }: { study: CaseStudy }) {
   return (
-    <article className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+    <article className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-900/5 transition duration-300 hover:shadow-lg">
       <div className="grid grid-cols-1 gap-0 lg:grid-cols-[1.4fr_1fr]">
         {/* Story */}
         <div className="p-8 sm:p-10">
@@ -90,17 +94,19 @@ function FeaturedCard({ study }: { study: CaseStudy }) {
         {/* Headline stats — dark panel */}
         <div className="grid grid-cols-2 gap-px bg-slate-200 lg:grid-cols-1">
           <div className="bg-slate-900 px-8 py-10 text-center lg:text-left">
-            <p className="text-5xl font-bold tracking-tight text-brand-light sm:text-6xl">
-              {study.summary.primaryMetric.value}
-            </p>
+            <CountUp
+              value={study.summary.primaryMetric.value}
+              className="block text-5xl font-bold tracking-tight text-brand-light sm:text-6xl"
+            />
             <p className="mt-2 text-sm font-medium text-slate-300">
               {study.summary.primaryMetric.label}
             </p>
           </div>
           <div className="bg-slate-900 px-8 py-10 text-center lg:text-left">
-            <p className="text-5xl font-bold tracking-tight text-brand-light sm:text-6xl">
-              {study.summary.secondaryMetric.value}
-            </p>
+            <CountUp
+              value={study.summary.secondaryMetric.value}
+              className="block text-5xl font-bold tracking-tight text-brand-light sm:text-6xl"
+            />
             <p className="mt-2 text-sm font-medium text-slate-300">
               {study.summary.secondaryMetric.label}
             </p>

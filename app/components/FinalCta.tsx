@@ -1,5 +1,6 @@
 import { Cta } from "@/app/components/Cta";
 import { FounderAvatar } from "@/app/components/FounderAvatar";
+import { Reveal } from "@/app/components/Reveal";
 import { founder } from "@/app/lib/site";
 
 /** Closing conversion section — personal, with the founder front-and-centre. */
@@ -11,8 +12,17 @@ export function FinalCta() {
   ];
 
   return (
-    <section id="audit" className="scroll-mt-20 bg-slate-900 py-20 sm:py-24">
-      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+    <section
+      id="audit"
+      className="relative scroll-mt-20 overflow-hidden bg-slate-900 py-20 sm:py-24"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-brand/20 blur-3xl"
+      />
+      <div aria-hidden="true" className="grain-overlay opacity-[0.06]" />
+
+      <Reveal className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <FounderAvatar
           shape="circle"
           className="mx-auto h-20 w-20 ring-2 ring-white/20"
@@ -64,7 +74,7 @@ export function FinalCta() {
             See pricing first
           </Cta>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
