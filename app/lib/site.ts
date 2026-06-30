@@ -136,7 +136,7 @@ export const pricing = [
 export const legal = {
   companyName: "Awesome Creations LTD TRADING AS SIMS PROSPECTS", // registered company name
   companyNumber: "12111166", // Companies House number
-  address: "[registered office address]",
+  address: "71-75 Shelton Street, London, Greater London, United Kingdom, WC2H 9JQ",
   icoNumber: "12111100", // ICO registration number
   jurisdiction: "England and Wales",
 } as const;
