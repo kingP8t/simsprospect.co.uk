@@ -81,7 +81,7 @@ export const pricing = [
   {
     name: "LinkedIn Outreach",
     volume: "600+ prospects per month",
-    priceMonthly: "$397",
+    priceMonthly: { usd: "$397", gbp: "£299" },
     cadence: "/month",
     tagline: "Land in the inboxes of decision-makers who fit your ICP.",
     features: [
@@ -97,7 +97,7 @@ export const pricing = [
   {
     name: "Cold Email Outreach",
     volume: "10,000+ emails per month",
-    priceMonthly: "$1,995",
+    priceMonthly: { usd: "$1,995", gbp: "£1,595" },
     cadence: "/month",
     tagline: "Done-for-you email campaigns built to start conversations.",
     features: [
@@ -113,7 +113,7 @@ export const pricing = [
   {
     name: "Cold Call Outreach",
     volume: "5,000+ calls per month",
-    priceMonthly: "$3,500",
+    priceMonthly: { usd: "$3,500", gbp: "£2,750" },
     cadence: "/month",
     tagline: "A dedicated SDR dialling your market every day.",
     features: [

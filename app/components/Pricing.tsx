@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/app/components/SectionHeading";
 import { Cta } from "@/app/components/Cta";
 import { pricing } from "@/app/lib/site";
+import { getCurrency } from "@/app/lib/currency";
 
 /* Tick icon used in feature lists */
 function CheckIcon() {
@@ -22,7 +23,8 @@ function CheckIcon() {
   );
 }
 
-export function Pricing() {
+export async function Pricing() {
+  const currency = await getCurrency();
   return (
     <section
       id="pricing"
@@ -72,7 +74,7 @@ export function Pricing() {
                     tier.highlighted ? "text-white" : "text-slate-900"
                   }`}
                 >
-                  {tier.priceMonthly}
+                  {tier.priceMonthly[currency]}
                 </span>
                 <span
                   className={`text-sm ${
