@@ -43,6 +43,64 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Avoid typographic orphans / ragged line breaks in body copy */
+p {
+  text-wrap: pretty;
+}
+
+/* ─── Scroll-reveal ────────────────────────────────────────────
+   Elements start hidden + nudged down and animate into place when
+   they enter the viewport (class toggled by the Reveal component).
+   Hidden state lives behind no-preference so reduced-motion users
+   (and anyone before JS runs in that mode) always see content. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.reveal-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Staggered variant: direct children fade up in sequence. */
+  .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-stagger.reveal-in > * {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-stagger.reveal-in > *:nth-child(2) { transition-delay: 0.07s; }
+  .reveal-stagger.reveal-in > *:nth-child(3) { transition-delay: 0.14s; }
+  .reveal-stagger.reveal-in > *:nth-child(4) { transition-delay: 0.21s; }
+  .reveal-stagger.reveal-in > *:nth-child(5) { transition-delay: 0.28s; }
+  .reveal-stagger.reveal-in > *:nth-child(6) { transition-delay: 0.35s; }
+}
+
+/* ─── Film-grain overlay ───────────────────────────────────────
+   Faint fractal-noise texture that lifts large flat surfaces out of
+   the "flat white" look. Drop <div className="grain-overlay" /> into
+   a position:relative section. */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* Respect users who prefer reduced motion */

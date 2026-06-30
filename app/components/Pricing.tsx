@@ -2,6 +2,7 @@ import { SectionHeading } from "@/app/components/SectionHeading";
 import { Cta } from "@/app/components/Cta";
 import { pricing } from "@/app/lib/site";
 import { getCurrency } from "@/app/lib/currency";
+import { Reveal } from "@/app/components/Reveal";
 
 /* Tick icon used in feature lists */
 function CheckIcon() {
@@ -28,30 +29,32 @@ export async function Pricing() {
   return (
     <section
       id="pricing"
-      className="scroll-mt-20 bg-white py-20 sm:py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-gradient-to-b from-white to-slate-50 py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div aria-hidden="true" className="grain-overlay" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Pricing"
           title="Pricing for every outbound channel"
           intro="Three channels, all month-to-month. Pick the one that fits how you want to reach buyers, or combine them, and scale up or down whenever."
         />
 
-        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {pricing.map((tier) => (
-            <article
-              key={tier.name}
-              className={`relative flex flex-col rounded-2xl p-8 ${
-                tier.highlighted
-                  ? "bg-slate-900 text-white ring-2 ring-brand"
-                  : "border border-slate-200 bg-white"
-              }`}
-            >
-              {tier.highlighted && (
-                <span className="absolute -top-3 right-6 rounded-full bg-brand px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-                  Most popular
-                </span>
-              )}
+        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {pricing.map((tier, i) => (
+            <Reveal key={tier.name} className="h-full" delay={i * 90}>
+              <article
+                className={`relative flex h-full flex-col rounded-2xl p-8 transition duration-300 ease-out ${
+                  tier.highlighted
+                    ? "bg-gradient-to-b from-slate-900 to-slate-950 text-white shadow-2xl shadow-slate-900/30 ring-1 ring-brand/60 hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-18px_rgba(200,69,29,0.45)]"
+                    : "border border-slate-200/80 bg-white shadow-sm ring-1 ring-slate-900/5 hover:-translate-y-1.5 hover:border-slate-300 hover:shadow-xl"
+                }`}
+              >
+                {tier.highlighted && (
+                  <span className="absolute -top-3 right-6 rounded-full bg-brand px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-lg shadow-brand/30">
+                    Most popular
+                  </span>
+                )}
 
               <h3
                 className={`text-lg font-semibold ${
@@ -109,16 +112,17 @@ export async function Pricing() {
                 ))}
               </ul>
 
-              <div className="mt-8">
-                <Cta
-                  variant={tier.highlighted ? "primary" : "secondary"}
-                  size="lg"
-                  className="w-full"
-                >
-                  {tier.cta}
-                </Cta>
-              </div>
-            </article>
+                <div className="mt-8">
+                  <Cta
+                    variant={tier.highlighted ? "primary" : "secondary"}
+                    size="lg"
+                    className="w-full"
+                  >
+                    {tier.cta}
+                  </Cta>
+                </div>
+              </article>
+            </Reveal>
           ))}
         </div>
 

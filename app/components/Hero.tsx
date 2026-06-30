@@ -1,12 +1,13 @@
 import { Cta } from "@/app/components/Cta";
 import { LeadForm } from "@/app/components/LeadForm";
 import { VideoPlayer } from "@/app/components/VideoPlayer";
+import { Reveal } from "@/app/components/Reveal";
 import { video } from "@/app/lib/video";
 
 /** Above-the-fold hero. Form-first (lead capture), outcome-led headline. */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-slate-50">
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">
       {/* Optional muted, looping background B-roll. Off until enabled in
           app/lib/video.ts. A light overlay keeps the text legible. */}
       {video.heroBackground.enabled && (
@@ -28,21 +29,31 @@ export function Hero() {
         </>
       )}
 
-      {/* Soft orange glow — decorative only */}
+      {/* Decorative depth layers — warm glow top-right, cooler accent
+          bottom-left, a masked dot grid, and a faint film grain. */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand/10 blur-3xl"
       />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-44 -left-44 h-[30rem] w-[30rem] rounded-full bg-brand-light/10 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-60 [background-image:radial-gradient(var(--color-slate-300)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:radial-gradient(ellipse_60%_55%_at_50%_0%,#000,transparent)] [-webkit-mask-image:radial-gradient(ellipse_60%_55%_at_50%_0%,#000,transparent)]"
+      />
+      <div aria-hidden="true" className="grain-overlay" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: message */}
-          <div>
+          <Reveal stagger>
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-tint px-3.5 py-1.5 text-sm font-semibold text-brand-dark ring-1 ring-inset ring-brand/20">
               B2B Lead Generation Agency
             </span>
 
-            <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl">
               There&apos;s a better way to{" "}
               <span className="text-brand">build your pipeline</span>
             </h1>
@@ -80,12 +91,12 @@ export function Hero() {
               No long contracts. Qualified meetings, booked straight onto your
               calendar.
             </p>
-          </div>
+          </Reveal>
 
           {/* Right: lead-capture form */}
-          <div className="lg:pl-8">
+          <Reveal className="lg:pl-8" delay={120}>
             <LeadForm />
-          </div>
+          </Reveal>
         </div>
 
         {/* Founder / explainer video. Off until enabled in app/lib/video.ts. */}
@@ -106,20 +117,22 @@ export function Hero() {
         )}
 
         {/* Trust strip */}
-        <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-2xl bg-slate-200 ring-1 ring-slate-200 sm:grid-cols-3">
-          {[
-            { stat: "SaaS · Recruitment · Pro services", label: "Industries we know" },
-            { stat: "Multi-channel", label: "Calls, LinkedIn & email" },
-            { stat: "Qualified only", label: "Meetings vetted to your ICP" },
-          ].map((item) => (
-            <div key={item.label} className="bg-white px-6 py-5 text-center">
-              <dt className="text-base font-semibold text-slate-900">
-                {item.stat}
-              </dt>
-              <dd className="mt-1 text-sm text-slate-500">{item.label}</dd>
-            </div>
-          ))}
-        </dl>
+        <Reveal className="mx-auto mt-16 max-w-3xl">
+          <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-slate-200 shadow-sm ring-1 ring-slate-900/5 sm:grid-cols-3">
+            {[
+              { stat: "SaaS · Recruitment · Pro services", label: "Industries we know" },
+              { stat: "Multi-channel", label: "Calls, LinkedIn & email" },
+              { stat: "Qualified only", label: "Meetings vetted to your ICP" },
+            ].map((item) => (
+              <div key={item.label} className="bg-white px-6 py-5 text-center">
+                <dt className="text-base font-semibold text-slate-900">
+                  {item.stat}
+                </dt>
+                <dd className="mt-1 text-sm text-slate-500">{item.label}</dd>
+              </div>
+            ))}
+          </dl>
+        </Reveal>
       </div>
     </section>
   );
