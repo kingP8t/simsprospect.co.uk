@@ -54,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
     summary: {
       body: "Home Lead Gen wanted to grow without building an internal sales team. We ran their outbound end-to-end, with messaging tuned for the home services niche they serve.",
       primaryMetric: { value: "186", label: "qualified appointments" },
-      secondaryMetric: { value: "£450K", label: "new revenue" },
+      secondaryMetric: { value: "$575K", label: "new revenue" },
     },
     about:
       "Home Lead Gen is a specialised marketing agency focused on the home services industry. They help contractors, home improvement companies, and service providers generate qualified leads through digital marketing: SEO, PPC, and social media advertising.",
@@ -99,7 +99,7 @@ export const caseStudies: CaseStudy[] = [
         sublabel: "Meetings with home services business owners",
       },
       {
-        value: "£450K",
+        value: "$575K",
         label: "New revenue",
         sublabel: "Direct revenue attributed to booked appointments",
       },
