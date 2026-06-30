@@ -8,8 +8,8 @@ export const site = {
   description:
     "SIMS PROSPECTS builds a predictable pipeline of qualified meetings for B2B teams through cold calling, LinkedIn outreach, and appointment setting.",
   url: "https://simsprospects.co.uk",
-  email: "hello@simsprospects.co.uk", // project support enquiries — ⚠️ CONFIRM mailbox exists
-  salesEmail: "king@simsprospects.co.uk", // sales enquiries — ⚠️ CONFIRM mailbox exists
+  email: "hello@simsprospects.co.uk", // project support enquiries
+  salesEmail: "king@simsprospects.co.uk", // sales enquiries
   // Cal.com discovery-call link
   bookingUrl: "https://cal.com/simsprospect/30min",
   // Company LinkedIn page
@@ -135,9 +135,9 @@ export const pricing = [
  */
 export const legal = {
   companyName: "Awesome Creations LTD TRADING AS SIMS PROSPECTS", // registered company name
-  companyNumber: "[Companies House number]", // e.g. 12345678
+  companyNumber: "12111166", // Companies House number
   address: "[registered office address]",
-  icoNumber: "[ICO registration number]",
+  icoNumber: "12111100", // ICO registration number
   jurisdiction: "England and Wales",
 } as const;
 
