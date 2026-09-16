@@ -28,14 +28,6 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.description,
-  keywords: [
-    "B2B lead generation",
-    "appointment setting",
-    "cold calling agency",
-    "LinkedIn outreach",
-    "outsourced SDR",
-    "sales pipeline",
-  ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -62,6 +54,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${bricolage.variable} h-full antialiased`}
     >
+      <head>
+        {/* Scroll-reveal sections start hidden until JS adds `reveal-in`.
+            Without JS that never happens, so show everything outright. */}
+        <noscript>
+          <style>{`.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body className="flex min-h-full flex-col bg-white text-slate-900">
         {/* Accessibility: lets keyboard users jump straight to content */}
         <a

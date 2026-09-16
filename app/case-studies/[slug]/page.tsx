@@ -18,16 +18,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const study = caseStudies.find((s) => s.slug === slug);
   if (!study) return { title: "Case study not found" };
 
+  const title = `${study.client} — Case Study`;
+  const path = `/case-studies/${study.slug}`;
+
   return {
-    title: `${study.client} — Case Study`,
+    title,
     description: study.headline,
+    alternates: { canonical: path },
     openGraph: {
-      title: `${study.client} — Case Study`,
+      title: `${title} — SIMS PROSPECTS`,
       description: study.headline,
+      url: path,
       type: "article",
       ...(study.image && {
         images: [{ url: study.image.src, alt: study.image.alt }],
       }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} — SIMS PROSPECTS`,
+      description: study.headline,
+      ...(study.image && { images: [study.image.src] }),
     },
   };
 }

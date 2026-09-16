@@ -56,7 +56,8 @@ p {
    Elements start hidden + nudged down and animate into place when
    they enter the viewport (class toggled by the Reveal component).
    Hidden state lives behind no-preference so reduced-motion users
-   (and anyone before JS runs in that mode) always see content. */
+   (and anyone before JS runs in that mode) always see content. Visitors
+   without JS get a <noscript> override in the root layout. */
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
@@ -88,6 +89,23 @@ p {
   .reveal-stagger.reveal-in > *:nth-child(4) { transition-delay: 0.21s; }
   .reveal-stagger.reveal-in > *:nth-child(5) { transition-delay: 0.28s; }
   .reveal-stagger.reveal-in > *:nth-child(6) { transition-delay: 0.35s; }
+
+  /* Above-the-fold entrance. Pure CSS, so it runs on first paint with no
+     JS, and it only moves content — never hides it — so the hero is
+     readable (and counts for LCP) immediately. */
+  @keyframes enter-rise {
+    from {
+      transform: translateY(14px);
+    }
+  }
+  .enter,
+  .enter-stagger > * {
+    animation: enter-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .enter-stagger > *:nth-child(2) { animation-delay: 0.06s; }
+  .enter-stagger > *:nth-child(3) { animation-delay: 0.12s; }
+  .enter-stagger > *:nth-child(4) { animation-delay: 0.18s; }
+  .enter-stagger > *:nth-child(5) { animation-delay: 0.24s; }
 }
 
 /* ─── Film-grain overlay ───────────────────────────────────────

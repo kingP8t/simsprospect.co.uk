@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import { LegalLayout } from "@/app/components/LegalLayout";
 import { site, legal, isPlaceholder } from "@/app/lib/site";
 
+const title = "Privacy Policy — SIMS PROSPECTS";
+const description =
+  "How SIMS PROSPECTS collects, uses, and protects personal data in line with the UK GDPR.";
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description:
-    "How SIMS PROSPECTS collects, uses, and protects personal data in line with the UK GDPR.",
+  description,
+  alternates: { canonical: "/privacy" },
+  openGraph: { title, description, url: "/privacy", type: "website" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function PrivacyPage() {

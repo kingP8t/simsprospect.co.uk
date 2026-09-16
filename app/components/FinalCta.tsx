@@ -64,7 +64,7 @@ export function FinalCta() {
         </ul>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Cta size="lg">Book your call</Cta>
+          <Cta size="lg">Book a discovery call</Cta>
           <Cta
             href="#pricing"
             variant="ghost"

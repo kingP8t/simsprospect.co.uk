@@ -84,19 +84,6 @@ export default async function ServiceDetailPage({ params }: Props) {
     areaServed: "Global",
   };
 
-  /* FAQ structured data — makes the Q&A below eligible for rich
-     results in search and more citable by AI answer engines.
-     Mirrors exactly the questions rendered in the FAQ section. */
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: service.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
-    })),
-  };
-
   /* Breadcrumb trail — Home › Services › this service. Helps search
      engines understand site hierarchy and can show breadcrumbs in results. */
   const breadcrumbJsonLd = {
@@ -122,7 +109,6 @@ export default async function ServiceDetailPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbJsonLd)}
       </script>

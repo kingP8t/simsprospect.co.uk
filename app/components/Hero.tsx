@@ -48,14 +48,15 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: message */}
-          <Reveal stagger>
+          {/* CSS-only entrance: visible on first paint, no JS needed. */}
+          <div className="enter-stagger">
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-tint px-3.5 py-1.5 text-sm font-semibold text-brand-dark ring-1 ring-inset ring-brand/20">
               B2B Lead Generation Agency
             </span>
 
             <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl">
-              There&apos;s a better way to{" "}
-              <span className="text-brand">build your pipeline</span>
+              Keep your sales team&apos;s calendar full of{" "}
+              <span className="text-brand">qualified meetings</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
@@ -91,12 +92,12 @@ export function Hero() {
               No long contracts. Qualified meetings, booked straight onto your
               calendar.
             </p>
-          </Reveal>
+          </div>
 
           {/* Right: lead-capture form */}
-          <Reveal className="lg:pl-8" delay={120}>
+          <div className="enter lg:pl-8" style={{ animationDelay: "0.12s" }}>
             <LeadForm />
-          </Reveal>
+          </div>
         </div>
 
         {/* Founder / explainer video. Off until enabled in app/lib/video.ts. */}

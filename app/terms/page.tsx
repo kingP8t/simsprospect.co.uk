@@ -2,10 +2,15 @@ import type { Metadata } from "next";
 import { LegalLayout } from "@/app/components/LegalLayout";
 import { site, legal, isPlaceholder } from "@/app/lib/site";
 
+const title = "Terms of Use — SIMS PROSPECTS";
+const description = "The terms that apply when you use the SIMS PROSPECTS website.";
+
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description:
-    "The terms that apply when you use the SIMS PROSPECTS website.",
+  description,
+  alternates: { canonical: "/terms" },
+  openGraph: { title, description, url: "/terms", type: "website" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function TermsPage() {

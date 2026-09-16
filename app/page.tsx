@@ -72,9 +72,9 @@ export default function HomePage() {
 
       {/* Capture emotionally-warmed visitors right after social proof */}
       <MidCtaSection
-        title="Ready to be the next one of these?"
+        title="Ready for a pipeline that looks like theirs?"
         body="Book a 30-minute call. We'll review your current pipeline, where the gaps are, and exactly how we'd book more meetings for your team."
-        ctaLabel="Book your call"
+        ctaLabel="Book a discovery call"
       />
 
       <Team />

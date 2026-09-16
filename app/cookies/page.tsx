@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import { LegalLayout } from "@/app/components/LegalLayout";
 import { site } from "@/app/lib/site";
 
+const title = "Cookie Policy — SIMS PROSPECTS";
+const description =
+  "What cookies SIMS PROSPECTS uses, what they do, and how to control them under the UK GDPR.";
+
 export const metadata: Metadata = {
   title: "Cookie Policy",
-  description:
-    "What cookies SIMS PROSPECTS uses, what they do, and how to control them under the UK GDPR.",
+  description,
+  alternates: { canonical: "/cookies" },
+  openGraph: { title, description, url: "/cookies", type: "website" },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 type CookieRow = {
