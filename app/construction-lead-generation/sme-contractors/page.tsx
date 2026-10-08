@@ -1,194 +1,159 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SectionHeading } from "@/app/components/SectionHeading";
 import { Cta } from "@/app/components/Cta";
 import { Reveal } from "@/app/components/Reveal";
 import { FounderAvatar } from "@/app/components/FounderAvatar";
-import { site, founder } from "@/app/lib/site";
+import { site } from "@/app/lib/site";
 
-/* ─── SEO metadata ────────────────────────────────────────────── */
+/* ─── SEO ─────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: "Construction Lead Generation UK | AI-Powered Pipeline",
+  title:
+    "Lead Generation for SME Contractors & Builders UK",
   description:
-    "Book more qualified meetings with architects, contractors, and specifiers. AI prospecting + multi-channel outreach to fill your construction sales pipeline — no day-rate billing, no long contracts.",
+    "Win more local construction projects without competing on price against 10 other builders. We find homeowners, developers, and architects with live projects and book qualified meetings for your team.",
   openGraph: {
-    title: "Construction Lead Generation UK | AI-Powered Pipeline",
+    title:
+      "Lead Generation for SME Contractors & Builders UK",
     description:
-      "Book more qualified meetings with architects, contractors, and specifiers. AI prospecting + multi-channel outreach to fill your construction sales pipeline.",
-    url: `${site.url}/construction-lead-generation`,
+      "Win more local construction projects without competing on price. We book qualified meetings with homeowners and developers who have live projects in your area.",
+    url: `${site.url}/construction-lead-generation/sme-contractors`,
     siteName: site.name,
     type: "website",
   },
   alternates: {
-    canonical: "/construction-lead-generation",
+    canonical: "/construction-lead-generation/sme-contractors",
   },
-};
-
-/* ─── Inline icons (matching site icon pattern) ───────────────── */
-
-const iconProps = {
-  width: 22,
-  height: 22,
-  viewBox: "0 0 24 24",
-  fill: "none",
-  stroke: "currentColor",
-  strokeWidth: 1.5,
-  strokeLinecap: "round" as const,
-  strokeLinejoin: "round" as const,
 };
 
 /* ─── Data ────────────────────────────────────────────────────── */
 
-const STEPS = [
+const PAIN_POINTS = [
   {
-    number: 1,
-    title: "AI project detection",
-    description:
-      "We monitor planning applications, tender notices, and industry data feeds to surface projects at the stage where your product or service can still be specified. No manual searching. No stale lists.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="6" />
-        <circle cx="12" cy="12" r="2" />
-        <path d="M12 2v4" />
-      </svg>
-    ),
+    title: "Racing to the bottom on price",
+    text: "You're one of ten builders quoting the same job from a lead site. The only way to win is to be cheapest — and that kills your margins.",
   },
   {
-    number: 2,
-    title: "Decision-maker identification",
-    description:
-      "We identify the architects, specifiers, project managers, and contractors involved in each opportunity — verified contact data, not guesswork.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="6" />
-        <circle cx="12" cy="12" r="2" />
-      </svg>
-    ),
+    title: "Relying on word of mouth",
+    text: "Referrals keep you busy some months, then nothing. You can't forecast revenue when your pipeline depends on who talks to who.",
   },
   {
-    number: 3,
-    title: "Multi-channel outreach",
-    description:
-      "Coordinated campaigns across email, LinkedIn, and phone. AI-personalised messaging timed to project milestones, so your introduction arrives when it's relevant.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <path d="M22 2 11 13" />
-        <path d="M22 2 15 22 11 13 2 9z" />
-      </svg>
-    ),
+    title: "Wasting time on tyre-kickers",
+    text: "You drive an hour to quote a job and never hear back. Half the leads you chase aren't ready, aren't funded, or aren't serious.",
   },
   {
-    number: 4,
-    title: "Qualified meetings on your calendar",
-    description:
-      "We book meetings that meet your criteria — right job title, right project stage, confirmed interest. You show up and sell. We handle everything else.",
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <rect x="3" y="4" width="18" height="18" rx="2" />
-        <path d="M16 2v4M8 2v4M3 10h18" />
-      </svg>
-    ),
+    title: "No time to do your own marketing",
+    text: "You know you should be doing more outreach, but you're on-site all day. Marketing falls to evenings and weekends — or doesn't happen at all.",
   },
 ];
 
-const COMPARISON = [
+const STEPS = [
   {
-    feature: "Pricing",
-    traditional: "Day rate (£150–£600/day)",
-    ours: "Pay per qualified meeting",
+    number: 1,
+    title: "We find live projects in your area",
+    description:
+      "Using planning application data and local market intelligence, we identify homeowners, developers, and architects with approved or in-progress projects that match the type of work you do — extensions, new builds, refurbs, loft conversions.",
   },
   {
-    feature: "Channels",
-    traditional: "Phone only",
-    ours: "Email + LinkedIn + Phone",
+    number: 2,
+    title: "We reach out on your behalf",
+    description:
+      "Personalised outreach across email, LinkedIn, and phone — written in your voice, referencing the specific project. No generic spam. Every message looks like it came from your team.",
   },
   {
-    feature: "Data",
-    traditional: "You supply the list",
-    ours: "AI-sourced from live project data",
+    number: 3,
+    title: "We qualify the opportunity",
+    description:
+      "Before a meeting hits your diary, we confirm the project scope, budget range, and timeline. If it doesn't match your criteria, it doesn't get through.",
   },
   {
-    feature: "Targeting",
-    traditional: "Whoever picks up",
-    ours: "Decision-makers on active projects",
-  },
-  {
-    feature: "Reporting",
-    traditional: "Weekly call log",
-    ours: "Real-time dashboard, full attribution",
-  },
-  {
-    feature: "Contracts",
-    traditional: "Rolling monthly or fixed term",
-    ours: "No long-term commitment",
+    number: 4,
+    title: "You show up and quote",
+    description:
+      "A qualified meeting with a homeowner or developer who has planning approval, a realistic budget, and wants to talk to a builder this week. You quote the job. We find the next one.",
   },
 ];
 
 const SECTORS = [
-  "Building product manufacturers",
-  "Specialist subcontractors",
-  "Design & build contractors",
-  "Facilities management",
-  "Construction technology & SaaS",
-  "Professional services",
+  "Extensions & renovations",
+  "Loft conversions",
+  "New-build residential",
+  "Design & build",
+  "Refurbishment & fit-out",
+  "Garage conversions",
+  "Listed buildings & heritage",
+  "Multi-unit residential",
+  "Commercial fit-out",
+  "Landscaping & groundworks",
 ];
 
-const DELIVERABLES = [
+const COMPARISON = [
   {
-    title: "Qualified appointments",
-    description:
-      "Face-to-face or online meetings with decision-makers who match your ICP and have confirmed interest.",
+    feature: "Lead source",
+    old: "Lead-gen websites, Checkatrade",
+    ours: "Live planning application data",
   },
   {
-    title: "CPD & specification meetings",
-    description:
-      "Get your product in front of architects and specifiers through targeted CPD outreach — we handle scheduling and follow-up.",
+    feature: "Competition",
+    old: "5–10 builders quoting the same job",
+    ours: "You're often the only one in the room",
   },
   {
-    title: "Tender & pricing opportunities",
-    description:
-      "We identify live tender opportunities in your target sectors and regions, and connect you before the field closes.",
+    feature: "Qualification",
+    old: "Name and phone number only",
+    ours: "Scope, budget, timeline confirmed",
   },
   {
-    title: "PSL introductions",
-    description:
-      "We start the preferred supplier list application process — getting your Pre-Qualification Questionnaire in front of the right procurement team.",
+    feature: "Your effort",
+    old: "You chase, you follow up, you quote blind",
+    ours: "Meeting booked in your diary — just show up",
+  },
+  {
+    feature: "Exclusivity",
+    old: "Same lead sold to multiple builders",
+    ours: "Exclusive — your meeting, your opportunity",
+  },
+  {
+    feature: "Pricing model",
+    old: "Pay per lead (qualified or not)",
+    ours: "Pay per qualified meeting",
   },
 ];
 
 const FAQS = [
   {
-    question:
-      "We've used telemarketing agencies before and the lead quality was poor.",
+    question: "I've been burned by lead-gen sites before. How is this different?",
     answer:
-      "Traditional agencies dial from a list and hope. We start from live project data and verified decision-maker contacts, so every conversation is relevant to something happening now. You define what 'qualified' means — we don't book meetings that don't meet your criteria.",
+      "Lead-gen sites sell the same lead to multiple builders and charge whether or not the lead is any good. We don't sell leads — we book exclusive, qualified meetings. You're the only contractor talking to that homeowner or developer. And we confirm scope, budget, and timeline before the meeting reaches your diary.",
   },
   {
-    question: "How do you know construction? This isn't a simple market.",
+    question: "I only work in a specific area. Can you target that?",
     answer:
-      "Our campaigns are timed around project stages — specification, tender, procurement — not arbitrary call schedules. Our messaging is written for the way architects, contractors, and specifiers actually think and buy.",
+      "Yes — we prospect by postcode, local authority, or radius from your base. If you only do work within 20 miles of your yard, that's where we look. We use planning data, so we know exactly where approved projects are.",
   },
   {
-    question: "What if we already have Barbour ABI or Glenigan data?",
+    question: "I don't have a sales team — it's just me and my guys on site.",
     answer:
-      "That's a head start. We can layer our outreach on top of your existing project intelligence, or source our own. Either way, we handle the outreach and meeting-booking so your data actually converts into conversations.",
+      "That's exactly why this works. We handle the entire outreach and booking process. All you need to do is show up to the meeting, quote the job, and get back on-site. We'll manage the follow-up too, if you want us to.",
   },
   {
-    question: "We need to protect our brand — construction is a small world.",
+    question: "What kind of projects will you find me?",
     answer:
-      "Every message is approved by you before it goes out. We act as an extension of your team, not a call centre. Your prospects will think they're hearing from you — because they are.",
+      "Whatever you tell us to look for. Extensions, loft conversions, new builds, refurbs, design & build — we filter by project type, size, and stage. If you only want residential projects over £100k with planning approved, that's what we target.",
+  },
+  {
+    question: "How many meetings can I expect per month?",
+    answer:
+      "It depends on your area, the project types you want, and how far you're willing to travel. Most SME contractors we work with aim for 6–12 qualified meetings per month. We'll give you a realistic volume estimate on the pipeline audit call.",
   },
   {
     question: "What does it cost?",
     answer:
-      "We price per qualified meeting, not per day or per hour. That means you pay for results, not activity. Book a pipeline audit and we'll give you a transparent quote based on your ICP and target volume.",
+      "We charge per qualified meeting — not per lead, not per day. You pay for meetings with project owners who match your criteria and actually show up. Book a pipeline audit and we'll give you a transparent quote based on your target area and project types.",
   },
 ];
 
-/* ─── Tick / Cross icons (matching Comparison.tsx pattern) ─────── */
+/* ─── Tick / Cross icons ──────────────────────────────────────── */
 
 function TickIcon() {
   return (
@@ -230,12 +195,11 @@ function CrossIcon() {
 
 /* ─── Page ────────────────────────────────────────────────────── */
 
-export default function ConstructionLeadGeneration() {
+export default function SmeContractors() {
   return (
     <>
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">
-        {/* Decorative blobs — matching Hero.tsx */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-brand/[0.06] blur-3xl"
@@ -248,22 +212,19 @@ export default function ConstructionLeadGeneration() {
 
         <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-28 sm:px-6 sm:pt-36 lg:px-8 lg:pt-44">
           <div className="enter-stagger mx-auto max-w-3xl text-center">
-            {/* Pill badge — matching Hero.tsx */}
             <p className="inline-flex items-center rounded-full bg-brand-tint px-3.5 py-1.5 text-sm font-semibold text-brand-dark ring-1 ring-inset ring-brand/20">
-              Construction &amp; Built Environment
+              SME Contractors &amp; Builders
             </p>
 
             <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              We book qualified meetings with the architects, contractors, and
-              specifiers you actually want to work&nbsp;with.
+              Win more local projects — without&nbsp;competing on&nbsp;price.
             </h1>
 
             <p className="mt-6 text-lg leading-relaxed text-slate-600">
-              Most construction telemarketing agencies make 100&nbsp;calls a day
-              and charge you a day rate whether those calls convert or not. We
-              use AI to find the right projects, identify the decision-makers,
-              and run multi-channel campaigns that book meetings&nbsp;— so your
-              sales team spends time closing, not cold&nbsp;calling.
+              We find homeowners and developers with approved planning
+              applications in your area, qualify the opportunity, and book you
+              the meeting. You&rsquo;re not one of ten builders quoting the
+              same&nbsp;job.
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -276,33 +237,16 @@ export default function ConstructionLeadGeneration() {
         </div>
       </section>
 
-      {/* ===== PROBLEM ===== */}
+      {/* ===== PAIN POINTS ===== */}
       <section className="bg-slate-50 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="The problem"
-            title="Your sales team is stuck chasing the wrong opportunities."
+            title="Lead sites sell you competition. We sell you exclusivity."
           />
 
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {[
-              {
-                title: "Outdated databases",
-                text: "Half the contacts are wrong, projects have moved on, and your callers are dialling into dead air.",
-              },
-              {
-                title: "Day-rate billing with no guarantees",
-                text: "You're paying £300–£600/day for someone to make calls — with no guarantee those calls turn into meetings.",
-              },
-              {
-                title: "Missing projects at the right stage",
-                text: "By the time you find out about a tender, the specification is already locked and the PSL is closed.",
-              },
-              {
-                title: "Sales team prospecting instead of closing",
-                text: "Your best people are buried in research and cold outreach when they should be in front of buyers.",
-              },
-            ].map((item, i) => (
+            {PAIN_POINTS.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
                 <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                   <h3 className="text-lg font-semibold text-slate-900">
@@ -318,7 +262,7 @@ export default function ConstructionLeadGeneration() {
         </div>
       </section>
 
-      {/* ===== HOW IT WORKS (matching Process.tsx) ===== */}
+      {/* ===== HOW IT WORKS ===== */}
       <section
         id="how-it-works"
         className="scroll-mt-20 bg-white py-20 sm:py-24"
@@ -326,7 +270,7 @@ export default function ConstructionLeadGeneration() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="How it works"
-            title="How we fill your pipeline — without day-rate billing."
+            title="From planning approval to your diary — in days, not months."
           />
 
           <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -349,12 +293,12 @@ export default function ConstructionLeadGeneration() {
         </div>
       </section>
 
-      {/* ===== COMPARISON TABLE (matching Comparison.tsx) ===== */}
+      {/* ===== COMPARISON TABLE ===== */}
       <section className="bg-slate-50 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Why us"
-            title="Not another telemarketing agency."
+            title="Not another lead site. A done-for-you sales team."
           />
 
           <Reveal className="mt-14">
@@ -366,7 +310,7 @@ export default function ConstructionLeadGeneration() {
                       &nbsp;
                     </th>
                     <th className="bg-slate-50 px-5 py-4 font-semibold text-slate-500">
-                      Traditional agency
+                      Lead-gen sites
                     </th>
                     <th className="bg-brand-tint px-5 py-4 font-semibold text-brand-dark">
                       {site.name}
@@ -377,9 +321,7 @@ export default function ConstructionLeadGeneration() {
                   {COMPARISON.map((row, i) => (
                     <tr
                       key={row.feature}
-                      className={
-                        i % 2 === 0 ? "bg-white" : "bg-slate-50/40"
-                      }
+                      className={i % 2 === 0 ? "bg-white" : "bg-slate-50/40"}
                     >
                       <td className="px-5 py-4 font-medium text-slate-900">
                         {row.feature}
@@ -388,7 +330,7 @@ export default function ConstructionLeadGeneration() {
                         <span className="mr-2 inline-block align-middle">
                           <CrossIcon />
                         </span>
-                        {row.traditional}
+                        {row.old}
                       </td>
                       <td className="bg-brand-tint/40 px-5 py-4 text-slate-900">
                         <span className="mr-2 inline-block align-middle">
@@ -405,18 +347,18 @@ export default function ConstructionLeadGeneration() {
         </div>
       </section>
 
-      {/* ===== SECTORS ===== */}
+      {/* ===== PROJECT TYPES ===== */}
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Who we work with"
-            title="Built for companies selling into construction."
-            intro="We work with product manufacturers, specialist subcontractors, consultancies, and service providers across the built environment. If your buyers are architects, contractors, developers, or facilities managers — we know how to reach them."
+            eyebrow="Project types"
+            title="Tell us what you build. We'll fill your diary."
+            intro="We target projects by type, size, and location so every meeting matches the work you actually want to win."
           />
 
           <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {SECTORS.map((sector, i) => (
-              <Reveal key={sector} delay={i * 60}>
+              <Reveal key={sector} delay={i * 40}>
                 <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm ring-1 ring-slate-900/5">
                   <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-brand" />
                   <span className="text-sm font-medium text-slate-900">
@@ -429,86 +371,48 @@ export default function ConstructionLeadGeneration() {
         </div>
       </section>
 
-      {/* ===== SEGMENT HUB ===== */}
-      <section className="bg-slate-50 py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Explore by segment"
-            title="See how we help your specific sector."
-            intro="Different parts of the construction industry buy differently. We've built tailored outreach programmes for each — click through to see what we'd do for you."
-          />
-
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {[
-              {
-                title: "Suppliers & Manufacturers",
-                description:
-                  "Get specified on live projects before the contractor locks in a supplier. CPD meetings, specification meetings, and tender opportunities with architects and contractors.",
-                href: "/construction-lead-generation/suppliers-and-manufacturers",
-                badge: "Tier 1 — Primary ICP",
-              },
-              {
-                title: "SME Contractors & Builders",
-                description:
-                  "Win more local projects without competing on price against 10 other builders. Exclusive, qualified meetings with homeowners and developers who have live planning approvals.",
-                href: "/construction-lead-generation/sme-contractors",
-                badge: "Tier 2 — Volume Play",
-              },
-            ].map((segment, i) => (
-              <Reveal key={segment.title} delay={i * 100}>
-                <Link
-                  href={segment.href}
-                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md hover:ring-brand/30"
-                >
-                  <span className="inline-flex w-fit items-center rounded-full bg-brand-tint px-3 py-1 text-xs font-semibold text-brand-dark ring-1 ring-inset ring-brand/20">
-                    {segment.badge}
-                  </span>
-                  <h3 className="mt-4 text-xl font-bold text-slate-900 group-hover:text-brand transition-colors">
-                    {segment.title}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
-                    {segment.description}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand group-hover:gap-2.5 transition-all">
-                    Learn more
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2.5}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== DELIVERABLES (matching Services card pattern) ===== */}
+      {/* ===== WHAT YOU GET ===== */}
       <section className="bg-slate-50 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="What you get"
-            title="The meetings that move your pipeline forward."
+            title="Qualified meetings — not a spreadsheet of phone numbers."
           />
 
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {DELIVERABLES.map((d, i) => (
+          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Exclusive project meetings",
+                text: "Meetings with homeowners and developers who have live, funded projects in your area. You're the only builder they're meeting through us.",
+              },
+              {
+                title: "Planning-data targeting",
+                text: "We use approved planning applications to find projects at the right stage — not cold leads from a directory, but people who need a builder now.",
+              },
+              {
+                title: "Multi-channel outreach",
+                text: "Email, LinkedIn, and phone — coordinated campaigns in your voice so prospects think they're hearing from your office, not an agency.",
+              },
+              {
+                title: "Full qualification",
+                text: "Scope, budget range, and timeline confirmed before the meeting lands in your diary. No more driving an hour to quote a job that doesn't exist.",
+              },
+              {
+                title: "CRM & reporting",
+                text: "Every prospect, conversation, and meeting tracked in a shared dashboard. You see exactly what's in your pipeline at any time.",
+              },
+              {
+                title: "Follow-up management",
+                text: "Quotes sent but no response? We follow up for you — chasing the decisions so you can stay on-site building.",
+              },
+            ].map((d, i) => (
               <Reveal key={d.title} delay={i * 80}>
                 <div className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                   <h3 className="text-lg font-semibold text-slate-900">
                     {d.title}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
-                    {d.description}
+                    {d.text}
                   </p>
                 </div>
               </Reveal>
@@ -517,7 +421,7 @@ export default function ConstructionLeadGeneration() {
         </div>
       </section>
 
-      {/* ===== SOCIAL PROOF / RESULTS (matching Results.tsx dark section) ===== */}
+      {/* ===== RESULTS (dark section) ===== */}
       <section className="relative overflow-hidden bg-slate-900 py-20 sm:py-24">
         <div
           aria-hidden="true"
@@ -531,20 +435,19 @@ export default function ConstructionLeadGeneration() {
               Results
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Results from the built&nbsp;environment.
+              More projects. Less chasing.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-300">
-              We&rsquo;re currently onboarding our first construction clients.
-              Case studies and metrics will appear here&nbsp;shortly.
+              We&rsquo;re onboarding our first contractor clients now. Real
+              metrics will replace these placeholders&nbsp;shortly.
             </p>
           </Reveal>
 
-          {/* Placeholder stats — replace with real data after first campaign */}
           <dl className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/10 sm:grid-cols-3">
             {[
-              { stat: "—", label: "Qualified meetings booked" },
-              { stat: "—", label: "Average show rate" },
-              { stat: "—", label: "Cost per meeting" },
+              { stat: "—", label: "Qualified meetings per month" },
+              { stat: "—", label: "Average meeting show rate" },
+              { stat: "—", label: "Cost per qualified meeting" },
             ].map((s) => (
               <div
                 key={s.label}
@@ -561,17 +464,17 @@ export default function ConstructionLeadGeneration() {
           </dl>
 
           <div className="mt-10 text-center">
-            <Cta size="lg">Book a Free Pipeline Audit</Cta>
+            <Cta size="lg">See what we can book for you</Cta>
           </div>
         </div>
       </section>
 
-      {/* ===== FAQ (matching Faq.tsx) ===== */}
+      {/* ===== FAQ ===== */}
       <section className="bg-slate-50 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="FAQ"
-            title="Questions construction sales leaders ask us."
+            title="Questions builders ask us."
           />
 
           <div className="mt-12 divide-y divide-slate-200 border-y border-slate-200">
@@ -604,9 +507,8 @@ export default function ConstructionLeadGeneration() {
         </div>
       </section>
 
-      {/* ===== FINAL CTA (matching FinalCta.tsx) ===== */}
+      {/* ===== FINAL CTA ===== */}
       <section className="relative overflow-hidden bg-slate-900 py-20 sm:py-24">
-        {/* Decorative brand blob */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-32 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-brand/15 blur-3xl"
@@ -621,21 +523,22 @@ export default function ConstructionLeadGeneration() {
             />
 
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Stop paying for&nbsp;calls.
+              Stop chasing leads.
               <br />
-              Start paying for&nbsp;meetings.
+              Start quoting jobs.
             </h2>
 
             <p className="mx-auto mt-4 max-w-lg text-lg leading-relaxed text-slate-300">
-              Your competitors are already in front of the buyers you want.
-              Let&rsquo;s make sure you&rsquo;re in the room&nbsp;too.
+              We&rsquo;ll show you the live projects in your area, tell you
+              exactly how many meetings we can book, and give you a
+              transparent&nbsp;price.
             </p>
 
             <ul className="mx-auto mt-8 flex max-w-md flex-col gap-3 text-left text-sm text-slate-300">
               {[
                 "30-minute discovery call",
-                "No commitment or obligation",
-                "We'll show you the exact projects and contacts we'd target",
+                "We'll show you approved projects in your postcode area",
+                "No commitment — see the pipeline before you decide",
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-2.5">
                   <svg
@@ -659,7 +562,11 @@ export default function ConstructionLeadGeneration() {
 
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <Cta size="lg">Book Your Free Pipeline Audit</Cta>
-              <Cta variant="ghost" size="lg" href={`mailto:${site.salesEmail}`}>
+              <Cta
+                variant="ghost"
+                size="lg"
+                href={`mailto:${site.salesEmail}`}
+              >
                 Email us instead
               </Cta>
             </div>
@@ -674,14 +581,14 @@ export default function ConstructionLeadGeneration() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Construction Lead Generation",
+            name: "Construction Lead Generation for SME Contractors",
             provider: {
               "@type": "Organization",
               name: site.name,
               url: site.url,
             },
             description:
-              "AI-powered B2B lead generation and appointment setting for companies selling into the UK construction and built environment sectors.",
+              "Done-for-you lead generation and appointment setting for SME contractors and builders. We use planning data to find live projects in your area and book qualified meetings with homeowners and developers.",
             areaServed: { "@type": "Country", name: "United Kingdom" },
             serviceType: "B2B Lead Generation",
           }),
