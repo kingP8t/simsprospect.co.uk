@@ -74,15 +74,14 @@ export const team: {
 ];
 
 /**
- * Pricing tiers shown on the Pricing section.
- * ⚠️ CONFIRM — adjust prices, names, and inclusions to match your offer.
+ * Channel tiers shown on the Pricing section. Prices are deliberately not
+ * listed (they're quoted on a call), so there is no price field here.
+ * ⚠️ CONFIRM — adjust names, volumes, and inclusions to match your offer.
  */
 export const pricing = [
   {
     name: "LinkedIn Outreach",
     volume: "600+ prospects per month",
-    priceMonthly: { usd: "$397", gbp: "£299" },
-    cadence: "/month",
     tagline: "Land in the inboxes of decision-makers who fit your ICP.",
     features: [
       "Qualified, verified prospect lists built for you",
@@ -97,8 +96,6 @@ export const pricing = [
   {
     name: "Cold Email Outreach",
     volume: "10,000+ emails per month",
-    priceMonthly: { usd: "$1,995", gbp: "£1,595" },
-    cadence: "/month",
     tagline: "Done-for-you email campaigns built to start conversations.",
     features: [
       "Unlimited, done-for-you email campaigns",
@@ -113,8 +110,6 @@ export const pricing = [
   {
     name: "Cold Call Outreach",
     volume: "5,000+ calls per month",
-    priceMonthly: { usd: "$3,500", gbp: "£2,750" },
-    cadence: "/month",
     tagline: "A dedicated SDR dialling your market every day.",
     features: [
       "Dedicated SDR making 300 dials/day",

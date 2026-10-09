@@ -57,7 +57,7 @@ const faqs: {
   {
     question: "What does it cost?",
     answer:
-      "Pricing is per channel and month-to-month, with a tier for LinkedIn, cold email, and cold calling. See the pricing section above for the current rates in your region and what's included, or book a call and we'll scope something custom.",
+      "Pricing is per channel and month-to-month, with a tier for LinkedIn, cold email, and cold calling. See the pricing section above for what's included in each, then book a call and we'll quote for your volume and targets.",
     links: [{ text: "pricing section", href: "#pricing" }],
   },
 ];

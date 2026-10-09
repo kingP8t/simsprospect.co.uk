@@ -1,7 +1,6 @@
 import { SectionHeading } from "@/app/components/SectionHeading";
 import { Cta } from "@/app/components/Cta";
 import { pricing } from "@/app/lib/site";
-import { getCurrency } from "@/app/lib/currency";
 import { Reveal } from "@/app/components/Reveal";
 
 /* Tick icon used in feature lists */
@@ -24,8 +23,7 @@ function CheckIcon() {
   );
 }
 
-export async function Pricing() {
-  const currency = await getCurrency();
+export function Pricing() {
   return (
     <section
       id="pricing"
@@ -71,25 +69,8 @@ export async function Pricing() {
                 {tier.tagline}
               </p>
 
-              <div className="mt-6 flex items-baseline gap-2">
-                <span
-                  className={`text-4xl font-bold tracking-tight sm:text-5xl ${
-                    tier.highlighted ? "text-white" : "text-slate-900"
-                  }`}
-                >
-                  {tier.priceMonthly[currency]}
-                </span>
-                <span
-                  className={`text-sm ${
-                    tier.highlighted ? "text-slate-400" : "text-slate-500"
-                  }`}
-                >
-                  {tier.cadence}
-                </span>
-              </div>
-
               <p
-                className={`mt-4 text-xs font-bold uppercase tracking-wide ${
+                className={`mt-6 text-xs font-bold uppercase tracking-wide ${
                   tier.highlighted ? "text-brand" : "text-brand-dark"
                 }`}
               >
