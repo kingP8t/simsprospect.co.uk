@@ -21,6 +21,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  /* The construction hub: the landing page plus its three sub-pages. */
+  const constructionRoutes: MetadataRoute.Sitemap = [
+    { path: "", priority: 0.8 },
+    { path: "/suppliers-and-manufacturers", priority: 0.7 },
+    { path: "/sme-contractors", priority: 0.7 },
+    { path: "/pipeline-calculator", priority: 0.6 },
+  ].map(({ path, priority }) => ({
+    url: `${site.url}/construction-lead-generation${path}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority,
+  }));
+
   const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((c) => ({
     url: `${site.url}/case-studies/${c.slug}`,
     lastModified: now,
@@ -28,5 +41,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...caseStudyRoutes];
+  return [
+    ...staticRoutes,
+    ...serviceRoutes,
+    ...constructionRoutes,
+    ...caseStudyRoutes,
+  ];
 }

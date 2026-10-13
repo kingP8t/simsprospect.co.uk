@@ -19,6 +19,10 @@ const footerNav = {
       label: "Account-based marketing",
       href: "/services/account-based-marketing",
     },
+    {
+      label: "Construction lead generation",
+      href: "/construction-lead-generation",
+    },
   ],
   Company: [
     { label: "How it works", href: "#process" },

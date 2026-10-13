@@ -1,6 +1,7 @@
 import { Hero } from "@/app/components/Hero";
 import { LogoBar } from "@/app/components/LogoBar";
 import { Services } from "@/app/components/Services";
+import { ConstructionSpotlight } from "@/app/components/ConstructionSpotlight";
 import { Comparison } from "@/app/components/Comparison";
 import { Pillars } from "@/app/components/Pillars";
 import { Guarantee } from "@/app/components/Guarantee";
@@ -33,6 +34,7 @@ const jsonLd = {
     "LinkedIn inbound marketing",
     "B2B appointment setting",
     "B2B lead generation",
+    "Construction lead generation",
   ],
 };
 
@@ -54,6 +56,7 @@ export default function HomePage() {
       <Hero />
       <LogoBar />
       <Services />
+      <ConstructionSpotlight />
       <Comparison />
       <Pillars />
 

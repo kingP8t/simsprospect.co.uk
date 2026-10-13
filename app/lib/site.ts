@@ -154,6 +154,7 @@ export const COOKIE_CONSENT_EVENT = "sims:cookie-consent-change";
 /** Primary in-page navigation links. */
 export const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "Construction", href: "/construction-lead-generation" },
   { label: "Case studies", href: "#cases" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },

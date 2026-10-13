@@ -19,7 +19,8 @@
 ## Who it's for
 B2B decision-makers (founders, sales leaders, heads of growth) at SaaS,
 recruitment, professional services, agency and e-commerce companies with a
-sales team and a defined deal size.
+sales team and a defined deal size. Also now offered: lead generation for UK
+construction suppliers, manufacturers and contractors.
 
 ## Pricing
 Per-channel and month-to-month with no lock-in. Rates are quoted on a discovery
@@ -32,6 +33,10 @@ call, based on your volume and targets.
 - B2B appointment setting: https://simsprospects.co.uk/services/b2b-appointment-setting
 - B2B lead generation: https://simsprospects.co.uk/services/b2b-lead-generation
 - Account-based marketing: https://simsprospects.co.uk/services/account-based-marketing
+- Construction lead generation: https://simsprospects.co.uk/construction-lead-generation
+- Construction, suppliers and manufacturers: https://simsprospects.co.uk/construction-lead-generation/suppliers-and-manufacturers
+- Construction, SME contractors and builders: https://simsprospects.co.uk/construction-lead-generation/sme-contractors
+- Construction pipeline calculator: https://simsprospects.co.uk/construction-lead-generation/pipeline-calculator
 - Case studies: https://simsprospects.co.uk/#cases
 - Book a call: https://cal.com/simsprospect/30min
 
