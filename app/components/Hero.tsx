@@ -121,7 +121,7 @@ export function Hero() {
         <Reveal className="mx-auto mt-16 max-w-3xl">
           <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-slate-200 shadow-sm ring-1 ring-slate-900/5 sm:grid-cols-3">
             {[
-              { stat: "SaaS · Recruitment · Pro services", label: "Industries we know" },
+              { stat: "Construction · SaaS · Agencies", label: "Industries we know" },
               { stat: "Multi-channel", label: "Calls, LinkedIn & email" },
               { stat: "Qualified only", label: "Meetings vetted to your ICP" },
             ].map((item) => (
