@@ -1,18 +1,10 @@
 import { SectionHeading } from "@/app/components/SectionHeading";
-import { VideoPlayer } from "@/app/components/VideoPlayer";
 import { Reveal } from "@/app/components/Reveal";
 
 type Testimonial = {
   quote: string;
   name: string;
   role: string;
-  /**
-   * Optional video testimonial. Drop the file in /public/videos/ and set
-   * `video: { src, poster }`. ⚠️ Use ONLY genuine client recordings — never
-   * AI-generated or actor footage presented as a real customer. Misleading
-   * testimonials can breach UK ASA/CAP rules and destroy trust.
-   */
-  video?: { src: string; poster?: string };
 };
 
 /**
@@ -66,14 +58,6 @@ export function Testimonials() {
             <figure
               className="flex h-full flex-col rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm ring-1 ring-slate-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              {item.video && (
-                <VideoPlayer
-                  src={item.video.src}
-                  poster={item.video.poster}
-                  title={`Testimonial from ${item.name}`}
-                  className="mb-6"
-                />
-              )}
               <span aria-hidden="true" className="text-5xl leading-none text-brand">
                 &ldquo;
               </span>

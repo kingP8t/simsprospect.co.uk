@@ -41,7 +41,7 @@ type VideoConfig = {
 
 export const video: VideoConfig = {
   hero: {
-    enabled: true, // ⚠️ Placeholder clip — swap in your real Higgsfield export.
+    enabled: false, // Off until the real founder video is ready.
     src: "/videos/founder-intro.mp4",
     poster: "/videos/founder-intro.jpg",
     title: "Meet SIMS PROSPECTS",

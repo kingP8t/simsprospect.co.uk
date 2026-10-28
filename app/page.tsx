@@ -3,10 +3,8 @@ import { LogoBar } from "@/app/components/LogoBar";
 import { Services } from "@/app/components/Services";
 import { ConstructionSpotlight } from "@/app/components/ConstructionSpotlight";
 import { Comparison } from "@/app/components/Comparison";
-import { Pillars } from "@/app/components/Pillars";
 import { Guarantee } from "@/app/components/Guarantee";
 import { Process } from "@/app/components/Process";
-import { CampaignTimeline } from "@/app/components/CampaignTimeline";
 import { Results } from "@/app/components/Results";
 import { CaseStudies } from "@/app/components/CaseStudies";
 import { Testimonials } from "@/app/components/Testimonials";
@@ -58,17 +56,7 @@ export default function HomePage() {
       <Services />
       <ConstructionSpotlight />
       <Comparison />
-      <Pillars />
-
-      {/* Capture visitors who just recognised what they need */}
-      <MidCtaSection
-        title="Sound like what your team needs?"
-        body="If outsourcing prospecting could change your numbers, a free 30-minute call will tell you whether it's worth doing. No obligation."
-        ctaLabel="Book a discovery call"
-      />
-
       <Process />
-      <CampaignTimeline />
       <Results />
       <CaseStudies />
       <Testimonials />

@@ -25,9 +25,9 @@ const footerNav = {
     },
   ],
   Company: [
-    { label: "How it works", href: "#process" },
-    { label: "Results", href: "#results" },
-    { label: "FAQ", href: "#faq" },
+    { label: "How it works", href: "/#process" },
+    { label: "Results", href: "/#results" },
+    { label: "FAQ", href: "/#faq" },
     { label: "Book a call", href: site.bookingUrl },
   ],
   // ⚠️ CONFIRM — these legal pages still need to be built (UK GDPR).
